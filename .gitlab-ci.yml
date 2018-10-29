@@ -1,0 +1,37 @@
+image: node:latest
+
+stages:
+    - deploy
+
+before_script:
+    - npm install which -y
+    - 'which ssh-agent || ( npm install openssh-clients -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+
+development:
+    stage: deploy
+    script:
+        - npm ci
+        - npm run build
+        - ssh duratubp@eu1.getlark.com "rm -r -f www/dev.kapsalas-portfolio.eu/dist"
+        - scp -v -C -r dist duratubp@eu1.getlark.com:www/dev.kapsalas-portfolio.eu
+
+    only:
+        - master
+    environment: development
+
+
+production:
+    stage: deploy
+    script:
+        - npm ci
+        - npm run build
+        - ssh duratubp@eu1.getlark.com "rm -r -f www/dev.kapsalas-portfolio.eu/dist"
+        - scp -C -r dist duratubp@eu1.getlark.com:www/dev.kapsalas-portfolio.eu
+    only:
+        - release
+    environment: production
