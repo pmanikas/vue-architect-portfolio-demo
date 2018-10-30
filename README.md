@@ -1,4 +1,4 @@
-# Kapsalas Portfolio App
+# kapsalas-portfolio.eu
 
 ## Project setup
 ```
