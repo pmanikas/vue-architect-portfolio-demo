@@ -1,7 +1,8 @@
 <template lang="pug">
   .top.base-section
     .top-button
-      img(src="@assets/img/home-button.png")
+      .top-button-inner
+        img(src="@assets/img/home-button.png")
 </template>
 
 <script>
@@ -16,4 +17,8 @@ export default {
 .top
   .top-button
     @include center
+
+    .top-button-inner
+      @include animation(heartbeat, 1.5s, linear, forwards, 3, 1s)
+      
 </style>

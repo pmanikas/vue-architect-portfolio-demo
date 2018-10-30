@@ -9,5 +9,25 @@ module.exports = {
     resolve: {
       alias: require('./aliases.config').webpack,
     },
+    module: {
+      rules: [
+        // ... other rules omitted
+        {
+          test: /\.sass$/,
+          use: [
+            'vue-style-loader',
+            {
+              loader: 'style-loader!css-loader!sass-loader',
+              options: {
+                // enable CSS Modules
+                modules: true,
+                // customize generated class names
+                localIdentName: '[local]_[hash:base64:8]'
+              }
+            }
+          ]
+        }
+      ]
+    }
   },
 }
