@@ -1,16 +1,16 @@
 <template lang="pug">
   .home-page
-    Top
+    Header
     About
 </template>
 
 <script>
-import Top from '@partials/Top';
+import Header from '@partials/Header';
 import About from '@partials/About';
 export default {
   name: 'HomePage',
   components: {
-    Top,
+    Header,
     About
   }
 }
