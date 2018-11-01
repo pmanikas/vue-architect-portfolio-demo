@@ -4,22 +4,26 @@
       .row.full-height
         .jar-xs-25
         .jar-xs-65
+          BaseVerLine(:height="'60vh'" :widthy="'10px'" :top="'0'" :left="'0'")
+          BaseVerLine(:height="'30vh'" :top="'0'" :right="'0'")
           .content
-            .profile-text
-              p {{owner.description}}
-
+            Compass
+          .footerBottom
+            MapMemo
+            Credits
         .jar-xs-10
 </template>
 
 <script>
-import { owner } from '@data/data'
+import Compass from '@components/Compass'
+import MapMemo from '@components/MapMemo'
+import Credits from '@components/Credits'
 export default {
   name: 'Footer',
-
-  data() {
-    return {
-      owner: owner
-    }
+  components: {
+    Compass,
+    MapMemo,
+    Credits
   }
 }
 </script>
@@ -29,4 +33,7 @@ export default {
 
 .footer
   color: white
+  .footerBottom
+    position: relative
+    top: 170px
 </style>

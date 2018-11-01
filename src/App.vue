@@ -3,16 +3,17 @@
     Background
     .router
       router-view
+    Footer
 </template>
 
 <script>
 import Background from '@components/Background';
-import HomePage from '@views/HomePage';
+import Footer from '@partials/Footer';
 export default {
   name: 'app',
   components: {
     Background,
-    HomePage
+    Footer
   }
 }
 </script>
@@ -24,17 +25,20 @@ export default {
     font-family: 'martha'
     src: url('~@assets/fonts/martha.ttf')
 
-  #app
-    color: white
-    min-height: 700vh
+  body
+    color: $mainFontColor
+    // min-height: 700vh
     p
       font-family: 'martha', Times, serif
       font-size: 2rem
       line-height: 3rem
+    a
+      text-decoration: none
+      color: $mainFontColor
   .content
     padding: $size-content-padding
-    border-left: 1px solid transparentize(white, 0.8)
-    border-right: 1px solid transparentize(white, 0.8)
+    // border-left: 1px solid transparentize(white, 0.8)
+    // border-right: 1px solid transparentize(white, 0.8)
   .base-section
     position: relative
     min-height: 100vh
