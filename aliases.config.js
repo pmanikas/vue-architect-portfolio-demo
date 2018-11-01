@@ -9,9 +9,11 @@ const aliases = {
   '@views': 'src/views',
   '@partials': 'src/partials',
   '@components': 'src/components',
+  '@ui-components': 'src/ui-components',
   '@assets': 'src/assets',
   '@utils': 'src/utils',
-  '@router': 'src/router'
+  '@router': 'src/router',
+  '@data' : 'src/data'
 }
 
 module.exports = {

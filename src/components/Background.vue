@@ -1,6 +1,5 @@
 <template lang="pug">
   .background(:style="{ backgroundPosition: `center ${scrollPosition}px` }")
-    p {{scrollPosition}}
 </template>
 
 <script>

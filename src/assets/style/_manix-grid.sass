@@ -1,0 +1,729 @@
+
+// Container is used to display a "boxed" layout and it's width varies based on given breakpoints
+// Before using columns with the following jar-* classes, a row class must be placed to ensure that floats are clean and paddings-margins are well applied
+// Columns Rules -> jar-X-Y where X is the screen size we want breakpoint to be applied and Y the % number we want the column to possess with maximum 100%.
+@import 'sizes'
+
+.container
+	padding-right: $base-spacing
+	padding-left: $base-spacing
+	margin-right: auto
+	margin-left: auto
+	.row
+		margin-right: -$base-spacing
+		margin-left: -$base-spacing
+
+.container-full
+	padding: 0
+	width: 100%
+	.row
+		margin-left: 0
+		margin-right: 0
+		position: relative
+
+.row
+	&:before, &:after
+	    display: table
+	    content: " "
+	&:after
+		clear: both
+
+.no-outer-pads
+	margin-left: 0
+	margin-right: 0
+	> [class*=jar-]
+		padding-left: 0
+		padding-right: 0
+
+.jar-xs-10, .jar-sm-10, .jar-md-10, .jar-lg-10, .jar-xl-10, .jar-xs-15, .jar-sm-15, .jar-md-15, .jar-lg-15, .jar-xl-15, .jar-xs-20, .jar-sm-20, .jar-md-20, .jar-lg-20, .jar-xl-20, .jar-xs-25, .jar-sm-25, .jar-md-25, .jar-lg-25, .jar-xl-25, .jar-xs-30, .jar-sm-30, .jar-md-30, .jar-lg-30, .jar-xl-30, .jar-xs-33, .jar-sm-33, .jar-md-33, .jar-lg-33, .jar-xl-33, .jar-xs-40, .jar-sm-40, .jar-md-40, .jar-lg-40, .jar-xl-40, .jar-xs-50, .jar-sm-50, .jar-md-50, .jar-lg-50, .jar-xl-50, .jar-xs-60, .jar-sm-60, .jar-md-60, .jar-lg-60, .jar-xl-60,.jar-xs-65, .jar-sm-65, .jar-md-65, .jar-lg-65, .jar-xl-65, .jar-xs-66, .jar-sm-66, .jar-md-66, .jar-lg-66, .jar-xl-66, .jar-xs-70, .jar-sm-70, .jar-md-70, .jar-lg-70, .jar-xl-70, .jar-xs-75, .jar-sm-75, .jar-md-75, .jar-lg-75, .jar-xl-75, .jar-xs-80, .jar-sm-80, .jar-md-80, .jar-lg-80, .jar-xl-80, .jar-xs-85, .jar-sm-85, .jar-md-85, .jar-lg-85, .jar-xl-85, .jar-xs-90, .jar-sm-90, .jar-md-90, .jar-lg-90, .jar-xl-90, .jar-xs-100, .jar-sm-100, .jar-md-100, .jar-lg-100 .jar-xl-100
+	position: relative
+	min-height: 1px
+	padding: 0
+
+.jar-xs-10, .jar-xs-15, .jar-xs-20, .jar-xs-25, .jar-xs-30, .jar-xs-33, .jar-xs-40, .jar-xs-50, .jar-xs-60, .jar-xs-65,.jar-xs-66, .jar-xs-70, .jar-xs-75, .jar-xs-80, .jar-xs-85, .jar-xs-90
+	float: left
+.jar-xs-100
+	width: 100%
+.jar-xs-90
+	width: 90%
+.jar-xs-85
+	width: 85%
+.jar-xs-80
+	width: 80%
+.jar-xs-75
+	width: 75%
+.jar-xs-70
+	width: 70%
+.jar-xs-66
+	width: 66.6666%
+.jar-xs-65
+	width: 65%
+.jar-xs-60
+	width: 60%
+.jar-xs-50
+	width: 50%
+.jar-xs-40
+	width: 40%
+.jar-xs-33
+	width: 33.3333%
+.jar-xs-30
+	width: 30%
+.jar-xs-25
+	width: 25%
+.jar-xs-20
+	width: 20%
+.jar-xs-15
+	width: 15%
+.jar-xs-10
+	width: 10%
+
+.jar-xs-pull-100
+  right: 100%
+.jar-xs-pull-90
+  right: 90%
+.jar-xs-pull-85
+  right: 85%
+.jar-xs-pull-80
+  right: 80%
+.jar-xs-pull-75
+  right: 75%
+.jar-xs-pull-70
+  right: 70%
+.jar-xs-pull-66
+  right: 66.6666%
+.jar-xs-pull-60
+  right: 65%
+.jar-xs-pull-65
+  right: 60%
+.jar-xs-pull-50
+  right: 50%
+.jar-xs-pull-40
+  right: 40%
+.jar-xs-pull-33
+  right: 33.3333%
+.jar-xs-pull-30
+  right: 30%
+.jar-xs-pull-25
+  right: 25%
+.jar-xs-pull-20
+  right: 20%
+.jar-xs-pull-15
+  right: 15%
+.jar-xs-pull-10
+  right: 10%
+.jar-xs-pull-0
+  right: auto
+
+.jar-xs-push-100
+  left: 100%
+.jar-xs-push-90
+  left: 90%
+.jar-xs-push-85
+  left: 85%
+.jar-xs-push-80
+  left: 80%
+.jar-xs-push-75
+  left: 75%
+.jar-xs-push-70
+  left: 70%
+.jar-xs-push-66
+  left: 66.6666%
+.jar-xs-push-65
+  left: 65%
+.jar-xs-push-60
+  left: 60%
+.jar-xs-push-50
+  left: 50%
+.jar-xs-push-40
+  left: 40%
+.jar-xs-push-33
+  left: 33.3333%
+.jar-xs-push-30
+  left: 30%
+.jar-xs-push-25
+  left: 25%
+.jar-xs-push-20
+  left: 20%
+.jar-xs-push-15
+  left: 15%
+.jar-xs-push-10
+  left: 10%
+.jar-xs-push-0
+  left: auto
+
+
+.text-xs-right
+	text-align: right
+.text-xs-left
+	text-align: left
+.text-xs-center
+	text-align: center
+
+.float-xs-right
+	float: right
+.float-xs-left
+	float: left
+.float-xs-none
+	float: none
+
+.v-align-xs
+	display: flex
+	align-items: center
+	flex-direction: row
+
+.hidden-xs
+	display: none !important
+.hidden-xs-off
+	display: inherit !important
+
+@media (min-width: $tablet)
+	.container
+		width: $tablet - $base-spacing*2
+	.jar-sm-10, .jar-sm-15, .jar-sm-20, .jar-sm-25, .jar-sm-30, .jar-sm-33, .jar-sm-40, .jar-sm-50, .jar-sm-60, .jar-sm-65, .jar-sm-66, .jar-sm-70, .jar-sm-75, .jar-sm-80, .jar-sm-85, .jar-sm-90, .jar-sm-100
+		float: left
+	.jar-sm-100
+		width: 100%
+	.jar-sm-90
+		width: 90%
+	.jar-sm-85
+		width: 85%
+	.jar-sm-80
+		width: 80%
+	.jar-sm-75
+		width: 75%
+	.jar-sm-70
+		width: 70%
+	.jar-sm-66
+		width: 66.6666%
+	.jar-sm-65
+		width: 65%
+	.jar-sm-60
+		width: 60%
+	.jar-sm-50
+		width: 50%
+	.jar-sm-40
+		width: 40%
+	.jar-sm-33
+		width: 33.3333%
+	.jar-sm-30
+		width: 30%
+	.jar-sm-25
+		width: 25%
+	.jar-sm-20
+		width: 20%
+	.jar-sm-15
+		width: 15%
+	.jar-sm-10
+		width: 10%
+
+	.jar-sm-pull-100
+	  right: 100%
+	.jar-sm-pull-90
+	  right: 90%
+	.jar-sm-pull-85
+	  right: 85%
+	.jar-sm-pull-80
+	  right: 80%
+	.jar-sm-pull-75
+	  right: 75%
+	.jar-sm-pull-70
+	  right: 70%
+	.jar-sm-pull-66
+	  right: 66.6666%
+	.jar-sm-pull-65
+	  right: 65%
+	.jar-sm-pull-60
+	  right: 60%
+	.jar-sm-pull-50
+	  right: 50%
+	.jar-sm-pull-40
+	  right: 40%
+	.jar-sm-pull-33
+	  right: 33.3333%
+	.jar-sm-pull-30
+	  right: 30%
+	.jar-sm-pull-25
+	  right: 25%
+	.jar-sm-pull-20
+	  right: 20%
+	.jar-sm-pull-15
+	  right: 15%
+	.jar-sm-pull-10
+	  right: 10%
+	.jar-sm-pull-0
+	  right: auto
+
+	.jar-sm-push-100
+	  left: 100%
+	.jar-sm-push-90
+	  left: 90%
+	.jar-sm-push-85
+	  left: 85%
+	.jar-sm-push-80
+	  left: 80%
+	.jar-sm-push-75
+	  left: 75%
+	.jar-sm-push-70
+	  left: 70%
+	.jar-sm-push-66
+	  left: 66.6666%
+	.jar-sm-push-65
+	  left: 65%
+	.jar-sm-push-60
+	  left: 60%
+	.jar-sm-push-50
+	  left: 50%
+	.jar-sm-push-40
+	  left: 40%
+	.jar-sm-push-33
+	  left: 33.3333%
+	.jar-sm-push-30
+	  left: 30%
+	.jar-sm-push-25
+	  left: 25%
+	.jar-sm-push-20
+	  left: 20%
+	.jar-sm-push-15
+	  left: 15%
+	.jar-sm-push-10
+	  left: 10%
+	.jar-sm-push-0
+	  left: auto
+
+	.text-sm-right
+		text-align: right
+	.text-sm-left
+		text-align: left
+	.text-sm-center
+		text-align: center
+
+	.float-sm-right
+		float: right
+	.float-sm-left
+		float: left
+	.float-sm-none
+		float: none
+
+	.v-align-sm
+		display: flex
+		align-items: center
+		flex-direction: row
+
+	.hidden-sm
+		display: none !important
+	.hidden-sm-off
+		display: block !important
+
+@media (min-width: $desktop)
+	.container
+		width: $desktop - $base-spacing*2
+	.jar-md-10, .jar-md-15, .jar-md-20, .jar-md-25, .jar-md-30, .jar-md-33, .jar-md-40, .jar-md-50, .jar-md-60, .jar-md-66, .jar-md-70, .jar-md-75, .jar-md-80, .jar-md-85, .jar-md-90, .jar-md-100
+		float: left
+	.jar-md-100
+		width: 100%
+	.jar-md-90
+		width: 90%
+	.jar-md-85
+		width: 85%
+	.jar-md-80
+		width: 80%
+	.jar-md-75
+		width: 75%
+	.jar-md-70
+		width: 70%
+	.jar-md-66
+		width: 66.6666%
+	.jar-md-65
+		width: 65%
+	.jar-md-60
+		width: 60%
+	.jar-md-50
+		width: 50%
+	.jar-md-40
+		width: 40%
+	.jar-md-33
+		width: 33.3333%
+	.jar-md-30
+		width: 30%
+	.jar-md-25
+		width: 25%
+	.jar-md-20
+		width: 20%
+	.jar-md-15
+		width: 15%
+	.jar-md-10
+		width: 10%
+
+	.jar-md-pull-100
+	  right: 100%
+	.jar-md-pull-90
+	  right: 90%
+	.jar-md-pull-85
+	  right: 85%
+	.jar-md-pull-80
+	  right: 80%
+	.jar-md-pull-75
+	  right: 75%
+	.jar-md-pull-70
+	  right: 70%
+	.jar-md-pull-66
+	  right: 66.6666%
+	.jar-md-pull-65
+	  right: 65%
+	.jar-md-pull-60
+	  right: 60%
+	.jar-md-pull-50
+	  right: 50%
+	.jar-md-pull-40
+	  right: 40%
+	.jar-md-pull-33
+	  right: 33.3333%
+	.jar-md-pull-30
+	  right: 30%
+	.jar-md-pull-25
+	  right: 25%
+	.jar-md-pull-20
+	  right: 20%
+	.jar-md-pull-15
+	  right: 15%
+	.jar-md-pull-10
+	  right: 10%
+	.jar-md-pull-0
+	  right: auto
+
+	.jar-md-push-100
+	  left: 100%
+	.jar-md-push-90
+	  left: 90%
+	.jar-md-push-85
+	  left: 85%
+	.jar-md-push-80
+	  left: 80%
+	.jar-md-push-75
+	  left: 75%
+	.jar-md-push-70
+	  left: 70%
+	.jar-md-push-66
+	  left: 66.6666%
+	.jar-md-push-65
+	  left: 65%
+	.jar-md-push-60
+	  left: 60%
+	.jar-md-push-50
+	  left: 50%
+	.jar-md-push-40
+	  left: 40%
+	.jar-md-push-33
+	  left: 33.3333%
+	.jar-md-push-30
+	  left: 30%
+	.jar-md-push-25
+	  left: 25%
+	.jar-md-push-20
+	  left: 20%
+	.jar-md-push-15
+	  left: 15%
+	.jar-md-push-10
+	  left: 10%
+	.jar-md-push-0
+	  left: auto
+
+	.text-md-right
+		text-align: right
+	.text-md-left
+		text-align: left
+	.text-md-center
+		text-align: center
+
+	.float-md-right
+		float: right
+	.float-md-left
+		float: left
+	.float-md-none
+		float: none
+
+	.v-align-md
+		display: flex
+		align-items: center
+		flex-direction: row
+
+	.hidden-md
+		display: none !important
+	.hidden-md-off
+		display: block !important
+
+@media (min-width: $widescreen)
+	.container
+		width: $widescreen - $base-spacing*2
+	.jar-lg-10, .jar-lg-15, .jar-lg-20, .jar-lg-25, .jar-lg-30, .jar-lg-33, .jar-lg-40, .jar-lg-50, .jar-lg-60, .jar-lg-65, .jar-lg-66, .jar-lg-70, .jar-lg-75, .jar-lg-80, .jar-lg-85, .jar-lg-90, .jar-lg-100
+		float: left
+	.jar-lg-100
+		width: 100%
+	.jar-lg-90
+		width: 90%
+	.jar-lg-85
+		width: 85%
+	.jar-lg-80
+		width: 80%
+	.jar-lg-75
+		width: 75%
+	.jar-lg-70
+		width: 70%
+	.jar-lg-66
+		width: 66.6666%
+	.jar-lg-65
+		width: 65%
+	.jar-lg-60
+		width: 60%
+	.jar-lg-50
+		width: 50%
+	.jar-lg-40
+		width: 40%
+	.jar-lg-33
+		width: 33.3333%
+	.jar-lg-30
+		width: 30%
+	.jar-lg-25
+		width: 25%
+	.jar-lg-20
+		width: 20%
+	.jar-lg-15
+		width: 15%
+	.jar-lg-10
+		width: 10%
+
+	.jar-lg-pull-100
+	  right: 100%
+	.jar-lg-pull-90
+	  right: 90%
+	.jar-lg-pull-85
+	  right: 85%
+	.jar-lg-pull-80
+	  right: 80%
+	.jar-lg-pull-75
+	  right: 75%
+	.jar-lg-pull-70
+	  right: 70%
+	.jar-lg-pull-66
+	  right: 66.6666%
+	.jar-lg-pull-65
+	  right: 65%
+	.jar-lg-pull-60
+	  right: 60%
+	.jar-lg-pull-50
+	  right: 50%
+	.jar-lg-pull-40
+	  right: 40%
+	.jar-lg-pull-33
+	  right: 33.3333%
+	.jar-lg-pull-30
+	  right: 30%
+	.jar-lg-pull-25
+	  right: 25%
+	.jar-lg-pull-20
+	  right: 20%
+	.jar-lg-pull-15
+	  right: 15%
+	.jar-lg-pull-10
+	  right: 10%
+	.jar-lg-pull-0
+	  right: auto
+
+	.jar-lg-push-100
+	  left: 100%
+	.jar-lg-push-90
+	  left: 90%
+	.jar-lg-push-85
+	  left: 85%
+	.jar-lg-push-80
+	  left: 80%
+	.jar-lg-push-75
+	  left: 75%
+	.jar-lg-push-70
+	  left: 70%
+	.jar-lg-push-66
+	  left: 66.6666%
+	.jar-lg-push-65
+	  left: 65%
+	.jar-lg-push-60
+	  left: 60%
+	.jar-lg-push-50
+	  left: 50%
+	.jar-lg-push-40
+	  left: 40%
+	.jar-lg-push-33
+	  left: 33.3333%
+	.jar-lg-push-30
+	  left: 30%
+	.jar-lg-push-25
+	  left: 25%
+	.jar-lg-push-20
+	  left: 20%
+	.jar-lg-push-15
+	  left: 15%
+	.jar-lg-push-10
+	  left: 10%
+	.jar-lg-push-0
+	  left: auto
+
+	.text-lg-right
+		text-align: right
+	.text-lg-left
+		text-align: left
+	.text-lg-center
+		text-align: center
+
+	.float-lg-right
+		float: right
+	.float-lg-left
+		float: left
+	.float-lg-none
+		float: none
+
+	.v-align-lg
+		display: flex
+		align-items: center
+		flex-direction: row
+
+	.hidden-lg
+		display: none !important
+	.hidden-lg-off
+		display: block !important
+
+@media (min-width: $xl)
+	.container
+		width: $xl - $base-spacing*2
+	.jar-xl-10, .jar-xl-15, .jar-xl-20, .jar-xl-25, .jar-xl-30, .jar-xl-33, .jar-xl-40, .jar-xl-50, .jar-xl-60, .jar-xl-65, .jar-xl-66, .jar-xl-70, .jar-xl-75, .jar-xl-80, .jar-xl-85, .jar-xl-90, .jar-xl-100
+		float: left
+	.jar-xl-100
+		width: 100%
+	.jar-xl-90
+		width: 90%
+	.jar-xl-85
+		width: 85%
+	.jar-xl-80
+		width: 80%
+	.jar-xl-75
+		width: 75%
+	.jar-xl-70
+		width: 70%
+	.jar-xl-66
+		width: 66.6666%
+	.jar-xl-65
+		width: 65%
+	.jar-xl-60
+		width: 60%
+	.jar-xl-50
+		width: 50%
+	.jar-xl-40
+		width: 40%
+	.jar-xl-33
+		width: 33.3333%
+	.jar-xl-30
+		width: 30%
+	.jar-xl-25
+		width: 25%
+	.jar-xl-20
+		width: 20%
+	.jar-xl-15
+		width: 15%
+	.jar-xl-10
+		width: 10%
+
+	.jar-xl-pull-100
+	  right: 100%
+	.jar-xl-pull-90
+	  right: 90%
+	.jar-xl-pull-85
+	  right: 85%
+	.jar-xl-pull-80
+	  right: 80%
+	.jar-xl-pull-75
+	  right: 75%
+	.jar-xl-pull-70
+	  right: 70%
+	.jar-xl-pull-66
+	  right: 66.6666%
+	.jar-xl-pull-65
+	  right: 65%
+	.jar-xl-pull-60
+	  right: 60%
+	.jar-xl-pull-50
+	  right: 50%
+	.jar-xl-pull-40
+	  right: 40%
+	.jar-xl-pull-33
+	  right: 33.3333%
+	.jar-xl-pull-30
+	  right: 30%
+	.jar-xl-pull-25
+	  right: 25%
+	.jar-xl-pull-20
+	  right: 20%
+	.jar-xl-pull-15
+	  right: 15%
+	.jar-xl-pull-10
+	  right: 10%
+	.jar-xl-pull-0
+	  right: auto
+
+	.jar-xl-push-100
+	  left: 100%
+	.jar-xl-push-90
+	  left: 90%
+	.jar-xl-push-85
+	  left: 85%
+	.jar-xl-push-80
+	  left: 80%
+	.jar-xl-push-75
+	  left: 75%
+	.jar-xl-push-70
+	  left: 70%
+	.jar-xl-push-66
+	  left: 66.6666%
+	.jar-xl-push-65
+	  left: 65%
+	.jar-xl-push-60
+	  left: 60%
+	.jar-xl-push-50
+	  left: 50%
+	.jar-xl-push-40
+	  left: 40%
+	.jar-xl-push-33
+	  left: 33.3333%
+	.jar-xl-push-30
+	  left: 30%
+	.jar-xl-push-25
+	  left: 25%
+	.jar-xl-push-20
+	  left: 20%
+	.jar-xl-push-15
+	  left: 15%
+	.jar-xl-push-10
+	  left: 10%
+	.jar-xl-push-0
+	  left: auto
+
+	.text-xl-right
+		text-align: right
+	.text-xl-left
+		text-align: left
+	.text-xl-center
+		text-align: center
+
+	.float-xl-right
+		float: right
+	.float-xl-left
+		float: left
+	.float-xl-none
+		float: none
+
+	.v-align-xl
+		display: flex
+		align-items: center
+		flex-direction: row
+
+	.hidden-xl
+		display: none !important
+	.hidden-xl-off
+		display: block !important
