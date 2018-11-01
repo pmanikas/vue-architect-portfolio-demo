@@ -10,7 +10,7 @@
             .profile-text
               p {{owner.description}}
             Steps
-            BaseVerLine(:height="'90vh'" :width="'10px'" :bottom="'0'" :left="'0'")
+            BaseVerLine(:height="'90vh'" :widthy="'10px'" :bottom="'0'" :left="'0'")
             BaseVerLine(:height="'50vh'" :bottom="'0'" :right="'0'")
         .jar-xs-10
           .grass
@@ -42,8 +42,8 @@ export default {
   position: absolute
   right: 0
   top: 40vh
-  height: 510vh
-  width: 100%
+  height: 140vh
+  width: calc(100% - #{$base-spacing})
   background: url(~@assets/img/grass.png)
   background-size: 100%
 </style>
