@@ -3,8 +3,7 @@
     .row.full-height
       .jar-md-75.jar-md-push-25.profile-details
         .baseContent
-          .profile-pic
-            img(:src="owner.avatar")
+          Avatar
           .profile-text
             p {{owner.description}}
           Steps
@@ -15,10 +14,13 @@
 
 <script>
 import { owner } from '@data/data'
+import Avatar from '@components/Avatar'
 import Steps from '@components/Steps'
+
 export default {
   name: 'About',
   components: {
+    Avatar,
     Steps
   },
   data() {
@@ -28,12 +30,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-@import '~@assets/style/essentials'
-
-.profile-details
-  img
-    width: 200px
-
-</style>

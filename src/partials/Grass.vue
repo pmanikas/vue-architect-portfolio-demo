@@ -14,10 +14,10 @@ export default {
 
 .grass
   position: absolute
-  right: 0
   top: 60vh
-  height: 530vh
+  right: 0
   width: calc(100% - #{$base-spacing})
+  height: 530vh
   background: url(~@assets/img/grass.png)
   background-size: 100% 100%
 </style>

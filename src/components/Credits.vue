@@ -3,7 +3,7 @@
     .designer
       p
         | Designed by 
-        a(href='#about') Lefteris Kapsalas
+        router-link(to="skills") Lefteris Kapsalas
     
     .developer
       BaseHorLine(:widthy="'100%'" :top="'-5px'" :left="'0'")
@@ -30,17 +30,17 @@ export default {
 
 .credits
   position: relative
+  top: $base-spacing * 3
+  float: right
   width: 330px
   text-align: center
-  top: $base-spacing*3
-  float: right
   p
     padding: 0
     margin: 0
     font-size: 1.4rem
-    line-height: 2
     font-weight: bold
-    color: transparentize($mainFontColor, 0.3)
+    line-height: 2
+    color: transparentize($main-font-color, 0.3)
   .designer, .developer
     position: relative
   

@@ -1,5 +1,5 @@
 <template lang="pug">
-  .hor-line(:style="{height: height, width: widthy, left: left, right: right, top: top, bottom: bottom}")
+  .horLine(:style="{height: height, width: widthy, left: left, right: right, top: top, bottom: bottom}")
 </template>
 
 <script>
@@ -35,9 +35,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.hor-line
-  position: absolute
-  background-image: url(~@assets/img/horizontal-line.png)
-  background-size: cover
-  background-repeat: repeat-y
+  .horLine
+    position: absolute
+    z-index: 10
+    background-image: url(~@assets/img/horizontal-line.png)
+    background-repeat: repeat-y
+    background-size: cover    
 </style>

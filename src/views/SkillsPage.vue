@@ -9,6 +9,7 @@
             .row.basicDetails
               .jar-md-60
                 h1 {{ owner.name }}
+                Avatar
               .jar-md-40
                 p(v-html="owner.address")
                 p Email: {{ owner.email }}
@@ -53,22 +54,25 @@
                     ul
                       li(v-for="(skill, index) in skillType.list" :key="index") {{ skill.skill }}
                         span {{ skill.level }}
-                  
+            BaseArrowBack(:top="'0'" :left="'0'")                
 </template>
 
 <script>
 import {owner, cv} from '@data/data'
 import Background from '@components/Background'
+import Avatar from '@components/Avatar'
+
 export default {
   name: 'SkillsPage',
+  components: {
+    Background,
+    Avatar
+  },
   data() {
     return {
       owner: owner,
       cv: cv
     }
-  },
-  components: {
-    Background
   }
 }
 </script>
@@ -83,6 +87,5 @@ export default {
       span
         float: right
         padding-left: $base-spacing
-
 </style>
 

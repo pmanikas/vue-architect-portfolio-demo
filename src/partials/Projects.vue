@@ -8,7 +8,8 @@
         .jar-md-75
           BaseVerLine(:height="'100vh'" :top="'0vh'" :left="'0'" :widthy="'10px'")
           .tiles
-          ProjectCover(:projectCoverImg="project.mainPhoto" :projectTitle="project.name" :titlePosition="project.titlePosition")
+          router-link(to="skills") 
+            ProjectCover(:projectCoverImg="project.mainPhoto" :projectTitle="project.name" :titlePosition="project.titlePosition")
 
 
 </template>
@@ -39,15 +40,14 @@ export default {
     position: relative
     .tiles
       position: absolute
-      left: 0
       top: 0
-      background: url(~@/assets/img/grid-tile.png) repeat
-      background-size: auto
+      left: 0
       width: 100%
       height: 100vh
+      overflow: visible
+      background: url(~@/assets/img/grid-tile.png) repeat
       background-position: 0% 0.1%
       background-size: 7.144% 10vh
-      overflow: visible
     .projectItem
       position: relative
 </style>

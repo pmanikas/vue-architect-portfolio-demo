@@ -24,34 +24,35 @@ export default {
 
 <style lang="sass" scoped>
   .sideSea
-    height: 100vh
     width: 100%
+    height: 100vh
     background: url(~@assets/img/sea.png) no-repeat
-    background-size: 100% 100vh
     background-position: center
+    background-size: 100% 100vh
     .check
       position: absolute
-      left: 11% 
+      left: 11%
       width: 74px
       height: 23px
+      cursor: pointer
       background-position: center center
       background-size: 100% 100%
       opacity: 0
       transition: opacity .3s ease-in-out
-      cursor: pointer
+      
       &:hover, &.active
         opacity: 1
 
     .check:nth-of-type(1)
-      background: url(~@assets/img/checkbox/red-checkbox.png) no-repeat
       top: 17vh
+      background: url(~@assets/img/checkbox/red-checkbox.png) no-repeat
     .check:nth-of-type(2)
-      background: url(~@assets/img/checkbox/blue-checkbox.png) no-repeat
       top: 36vh
+      background: url(~@assets/img/checkbox/blue-checkbox.png) no-repeat
     .check:nth-of-type(3)
-      background: url(~@assets/img/checkbox/orange-checkbox.png) no-repeat
       top: 55vh
+      background: url(~@assets/img/checkbox/orange-checkbox.png) no-repeat
     .check:nth-of-type(4)
+      top: 74vh
       background: url(~@assets/img/checkbox/green-checkbox.png) no-repeat
-      top: 74vh    
 </style>

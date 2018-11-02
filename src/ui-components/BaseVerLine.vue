@@ -1,5 +1,5 @@
 <template lang="pug">
-  .ver-line(:style="{height: height, width: widthy, left: left, right: right, top: top, bottom: bottom}")
+  .verLine(:style="{height: height, width: widthy, left: left, right: right, top: top, bottom: bottom}")
 </template>
 
 <script>
@@ -35,9 +35,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.ver-line
+.verLine
   position: absolute
+  z-index: 10
   background-image: url(~@assets/img/vertical-line.png)
-  background-size: 100%
   background-repeat: repeat-y
+  background-size: 100%
 </style>

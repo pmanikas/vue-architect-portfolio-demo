@@ -14,8 +14,8 @@ export default {
     bottom: 0
     left: 0
     width: 250px
-    opacity: 0.7
     background: url(~@assets/img/bottom-left-smudge.png) no-repeat
-    background-size: contain
     background-position: bottom
+    background-size: contain
+    opacity: 0.7
 </style>

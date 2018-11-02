@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'App'
 }
 </script>
 
@@ -42,9 +42,9 @@ export default {
 
 <style lang="sass" scoped>
 .background
-    position: fixed
-    width: 100%
-    height: 100%
-    background: url(~@assets/img/blackbord-bg.jpg)
-    background-position: center top
+  position: fixed
+  width: 100%
+  height: 100%
+  background: url(~@assets/img/blackbord-bg.jpg)
+  background-position: center top
 </style>

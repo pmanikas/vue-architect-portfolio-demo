@@ -43,8 +43,8 @@ export default {
 
 .baseArrowBack
   position: absolute
-  background-image: url(~@assets/img/arrow-back.png)
-  background-size: contain
-  background-repeat: no-repeat
   cursor: pointer
+  background-image: url(~@assets/img/arrow-back.png)
+  background-repeat: no-repeat
+  background-size: contain
 </style>

@@ -16,31 +16,31 @@ export default {
 
 .steps
   position: absolute
-  left: 0
   right: 0
   bottom: $base-spacing
+  left: 0
   width: 40px
   height: 80px
   margin: 0 auto
   span
     position: absolute
-    background-size: 100%
     width: 12px
     height: 30px
+    background-size: 100%
     animation: step 3s linear infinite
     &:nth-of-type(1)
-      background-image: url(~@assets/img/steps/step1.png)
-      left: 0
       top: 0
+      left: 0
+      background-image: url(~@assets/img/steps/step1.png)
     &:nth-of-type(2)
-      background-image: url(~@assets/img/steps/step2.png)
-      right: 0
       top: 50%
+      right: 0
+      background-image: url(~@assets/img/steps/step2.png)
       transform: translateY(-50%)
       animation-delay: .333s
     &:nth-of-type(3)
-      background-image: url(~@assets/img/steps/step3.png)
-      left: 0
       bottom: 0
+      left: 0
+      background-image: url(~@assets/img/steps/step3.png)
       animation-delay: .666s
 </style>

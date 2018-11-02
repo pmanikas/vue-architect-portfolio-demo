@@ -4,12 +4,16 @@
   font-family: 'martha'
   src: url('~@assets/fonts/martha.ttf')
 
-body
-  font-size: 14px
-  line-height: 1
-  color: $mainFontColor
+body.body
   font-family: 'martha', Times, serif
-  p, li
+  font-size: 20px
+  line-height: 1
+  color: $main-font-color
+  
+
+  p
+    font-size: 1.5em
+  li
     font-size: 1.5em
   h1
     font-size: 2.5em
@@ -24,9 +28,9 @@ body
   h6
     font-size: .75em
   a
+    color: $main-font-color
     text-decoration: none
-    color: $mainFontColor
-
+    
 
 @media(min-width: $desktop)
   body

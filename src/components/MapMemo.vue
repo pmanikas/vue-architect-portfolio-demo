@@ -38,7 +38,7 @@ export default {
   name: 'MapMemo',
   methods: {
     mess() {
-      return
+      return ""
     }
   }
 }
@@ -52,44 +52,44 @@ export default {
     height: 62px
     text-align: center
     p
-      line-height: 33px
       padding: 0
       margin: 0
       font-weight: bold
+      line-height: 33px
       color: #222
-      text-shadow: 1px 1px 0px #222, -1px -1px 0px #222
+      text-shadow: 1px 1px 0 #222, -1px -1px 0 #222
       letter-spacing: 5px
       word-spacing: 10px
     
     .mapMemoScale
       position: relative
+      top: 5px
       width: 100%
       height: 52px
-      top: 5px
       opacity: 0.6
       span
+        display: inline-block
         width: 25%
         height: 50%
-        display: inline-block
         background-image: url(~@assets/img/smudge.png)
         background-position: 60% 50%
       span:nth-of-type(2n+1)
         transform: translateY(100%)
-        
+
+    .doNotPress, .cvBtn
+      transform: translateY(100%)   
 
     .doNotPress, .contactBtn, .cvBtn
-      height: 28px;
-      background-size: 133% auto
-      background-position: 60% 50%
       position: relative
-      background-image: url(~@assets/img/smudge.png)
+      top: 4px
+      height: 28px
       overflow: hidden
       cursor: pointer
+      background-image: url(~@assets/img/smudge.png)
+      background-position: 60% 50%
+      background-size: 133% auto
       opacity: 0.6
-      top: 4px
       transition: opacity .3s ease-in-out
       &:hover
         opacity: 1
-    .doNotPress, .cvBtn
-      transform: translateY(100%)
 </style>

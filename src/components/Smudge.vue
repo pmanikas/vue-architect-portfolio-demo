@@ -18,6 +18,6 @@ export default {
     background: url(~@/assets/img/smudge.png) no-repeat
     background-position: center
     background-size: contain
-    transform: translateY(50%)
     opacity: 0.3
+    transform: translateY(50%)
 </style>
