@@ -1,6 +1,6 @@
 import avatar from '@assets/img/face.png'
 import restorationOfStAchilliosCover from '@assets/img/projects/project-1/restoration-of-st-achillios-cover.jpg'
-import socialHousesCover from '@assets/img/projects/project-2/social-houses-cover.jpg'
+import socialHousesCover from '@assets/img/projects/project-2/socialhouses-cover.jpg'
 import parasiticHouseCover from '@assets/img/projects/project-3/parasitic-house-cover.jpg'
 import houseRenovationCover from '@assets/img/projects/project-4/house-renovation-cover.jpg'
 
