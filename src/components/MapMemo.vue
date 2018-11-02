@@ -15,7 +15,8 @@
                 .jar-xs-50
                   BaseVerLine(:height="'230%'" :top="'-10%'" :left="'0'")
                   .cvBtn
-                    p CV
+                    router-link(to="skills") 
+                      p CV
             .jar-xs-50
               BaseVerLine(:height="'250%'" :top="'-10%'" :left="'0'")
               .contactBtn

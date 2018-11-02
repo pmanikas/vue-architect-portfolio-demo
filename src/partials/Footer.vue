@@ -1,17 +1,18 @@
 <template lang="pug">
-  .footer.base-section
+  .footer.baseSection
     .container-full
       .row.full-height
-        .jar-xs-25
-        .jar-xs-65
-          BaseVerLine(:height="'60vh'" :widthy="'10px'" :top="'0'" :left="'0'")
-          BaseVerLine(:height="'30vh'" :top="'0'" :right="'0'")
-          .content
-            Compass
-          .footerBottom
-            MapMemo
-            Credits
-        .jar-xs-10
+        .jar-md-90
+          .row
+            //- .jar-xs-25
+            .jar-md-75.jar-md-push-25
+              BaseVerLine(:height="'60vh'" :widthy="'10px'" :top="'0'" :left="'0'")
+              BaseVerLine(:height="'30vh'" :top="'0'" :right="'0'")
+              .baseContent
+                Compass
+              .footerBottom
+                MapMemo
+                Credits
 </template>
 
 <script>

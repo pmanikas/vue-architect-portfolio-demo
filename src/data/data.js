@@ -9,17 +9,19 @@ export let owner = {
   phone: '07555-471228',
   developer: 'Pandelis Manikas',
   developerWebsite: 'https://pantelismanikas.eu',
-  address: '5(pf4) Beaverhall Road Edinburgh, EH7 4JQ'
+  address: '5(pf4) Beaverhall Road<br> Edinburgh, EH7 4JQ'
 }
 
 export let cv = {
-  education: {
-    id: '0001',
-    name: 'Democritus University of Thrace (DUTH)',
-    area: 'Xanthi Greece',
-    date: '2006 - 2014',
-    description: '5 year Diploma Degree (Bachelor & Master) <br> Dpt Architectural Engineering'
-  },
+  education: [
+    {
+      id: '0001',
+      name: 'Democritus University of Thrace (DUTH)',
+      area: 'Xanthi Greece',
+      date: '2006 - 2014',
+      description: '5 year Diploma Degree (Bachelor & Master) <br> Dpt Architectural Engineering'
+    }
+  ],
   jobs:[
     {
       id: '0001',

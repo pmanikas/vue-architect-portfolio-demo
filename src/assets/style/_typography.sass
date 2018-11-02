@@ -1,0 +1,39 @@
+@import 'essentials'
+
+@font-face
+  font-family: 'martha'
+  src: url('~@assets/fonts/martha.ttf')
+
+body
+  font-size: 14px
+  line-height: 1
+  color: $mainFontColor
+  font-family: 'martha', Times, serif
+  p, li
+    font-size: 1.5em
+  h1
+    font-size: 2.5em
+  h2
+    font-size: 1.875em
+  h3
+    font-size: 1.5em
+  h4
+    font-size: 1.12em
+  h5
+    font-size: .83em
+  h6
+    font-size: .75em
+  a
+    text-decoration: none
+    color: $mainFontColor
+
+
+@media(min-width: $desktop)
+  body
+    font-size: 16px
+@media(min-width: $widescreen)
+  body
+    font-size: 18px
+@media(min-width: $xl)
+  body
+    font-size: 20px

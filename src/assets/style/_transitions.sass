@@ -1,0 +1,39 @@
+/* Slide Left
+
+.slide-left-enter-active, .slide-left-leave-active
+  transition: transform 0.15s cubic-bezier(1, 0.5, 0.8, 1)
+
+.slide-left-enter
+  transform: translateX(100%)
+  opacity: 1
+
+.slide-left-leave-to
+  transform: translateX(-100%)
+  opacity: 0
+
+/* Slide Right
+
+.slide-right-enter-active, .slide-right-leave-active
+  transition: transform 0.3s cubic-bezier(1, 0.5, 0.8, 1)
+
+.slide-right-enter
+  transform: translateX(-100%)
+  opacity: 1
+  transition: transform 0.3s cubic-bezier(1, 0.5, 0.8, 1)
+
+.slide-right-leave-to
+  transform: translateX(100%)
+  opacity: 0
+  transition: transform 0.3s cubic-bezier(1, 0.5, 0.8, 1)
+
+
+/* Fade
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .15s
+
+.fade-enter-active
+  transition-delay: 0.15s
+
+.fade-enter, .fade-leave-active
+  opacity: 0

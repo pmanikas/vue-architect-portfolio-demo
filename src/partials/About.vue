@@ -1,19 +1,16 @@
 <template lang="pug">
-  .about.base-section
-    .container-full
-      .row.full-height
-        .jar-xs-25
-        .jar-xs-65.profile-details
-          .content
-            .profile-pic
-              img(:src="owner.avatar")
-            .profile-text
-              p {{owner.description}}
-            Steps
-            BaseVerLine(:height="'90vh'" :widthy="'10px'" :bottom="'0'" :left="'0'")
-            BaseVerLine(:height="'50vh'" :bottom="'0'" :right="'0'")
-        .jar-xs-10
-          .grass
+  .about.baseSection
+    .row.full-height
+      .jar-md-75.jar-md-push-25.profile-details
+        .baseContent
+          .profile-pic
+            img(:src="owner.avatar")
+          .profile-text
+            p {{owner.description}}
+          Steps
+          BaseVerLine(:height="'90vh'" :widthy="'10px'" :bottom="'0'" :left="'0'")
+          BaseVerLine(:height="'50vh'" :bottom="'0'" :right="'0'")
+        
 </template>
 
 <script>
@@ -38,12 +35,5 @@ export default {
 .profile-details
   img
     width: 200px
-.grass
-  position: absolute
-  right: 0
-  top: 40vh
-  height: 140vh
-  width: calc(100% - #{$base-spacing})
-  background: url(~@assets/img/grass.png)
-  background-size: 100%
+
 </style>

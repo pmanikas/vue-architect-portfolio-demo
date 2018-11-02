@@ -26,10 +26,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.background
-  position: fixed
-  width: 100%
-  height: 100%
-  background: url(~@assets/img/blackbord-bg.jpg)
-  background-position: center top
+  .background
+    position: fixed
+    width: 100%
+    height: 100%
+    background: url(~@assets/img/blackbord-bg.jpg)
+    background-position: center top
 </style>
