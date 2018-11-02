@@ -1,4 +1,8 @@
-import avatar from '@assets/img/face.png';
+import avatar from '@assets/img/face.png'
+import restorationOfStAchilliosCover from '@assets/img/projects/project-1/restoration-of-st-achillios-cover.jpg'
+import socialHousesCover from '@assets/img/projects/project-2/social-houses-cover.jpg'
+import parasiticHouseCover from '@assets/img/projects/project-3/parasitic-house-cover.jpg'
+import houseRenovationCover from '@assets/img/projects/project-4/house-renovation-cover.jpg'
 
 export let owner = {
   name: 'Lefteris Kapsalas',
@@ -176,7 +180,7 @@ export let projects = [
   {
     id: '0001',
     name: 'Restoration of St. Achillios',
-    mainPhoto: '@assets/img/project-1/project-1-cover.png',
+    mainPhoto: restorationOfStAchilliosCover,
     galleryPhotos: [
       ''
     ]
@@ -184,7 +188,7 @@ export let projects = [
   {
     id: '0002',
     name: 'Social Houses',
-    mainPhoto: '@assets/img/project-1/project-2-cover.png',
+    mainPhoto: socialHousesCover,
     galleryPhotos: [
       ''
     ]
@@ -192,7 +196,8 @@ export let projects = [
   {
     id: '0003',
     name: 'Parasitic House',
-    mainPhoto: '@assets/img/project-1/project-3-cover.png',
+    mainPhoto: parasiticHouseCover,
+    titlePosition: 'left',
     galleryPhotos: [
       ''
     ]
@@ -200,7 +205,7 @@ export let projects = [
   {
     id: '0004',
     name: 'House Renovation',
-    mainPhoto: '@assets/img/project-1/project-4-cover.png',
+    mainPhoto: houseRenovationCover,
     galleryPhotos: [
       ''
     ]
