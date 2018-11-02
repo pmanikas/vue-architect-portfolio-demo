@@ -1,7 +1,7 @@
 <template lang="pug">
   .footer.baseSection
     .container-full
-      .row.full-height
+      .row.fullHeight
         .jar-md-90
           .row
             //- .jar-xs-25

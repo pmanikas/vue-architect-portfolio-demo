@@ -24,7 +24,7 @@ export default {
     min-height: 100vh
     min-width: 1px
     // border: 1px solid transparentize(white, 0.8) // DEV
-  .full-height, .full-height > div
+  .fullHeight, .fullHeight > div
     min-height: 100vh
 
   @media(min-width: $tablet)

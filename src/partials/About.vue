@@ -1,6 +1,6 @@
 <template lang="pug">
   .about.baseSection
-    .row.full-height
+    .row.fullHeight
       .jar-md-75.jar-md-push-25.profile-details
         .baseContent
           Avatar

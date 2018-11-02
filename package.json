@@ -7,9 +7,6 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "gitHooks": {
-    "pre-commit": "PRE_COMMIT=true lint-staged"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
