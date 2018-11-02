@@ -171,3 +171,38 @@ export let cv = {
     'FIRST AID TRAINED'
   ]
 }
+
+export let projects = [
+  {
+    id: '0001',
+    name: 'Restoration of St. Achillios',
+    mainPhoto: '@assets/img/project-1/project-1-cover.png',
+    galleryPhotos: [
+      ''
+    ]
+  },
+  {
+    id: '0002',
+    name: 'Social Houses',
+    mainPhoto: '@assets/img/project-1/project-2-cover.png',
+    galleryPhotos: [
+      ''
+    ]
+  },
+  {
+    id: '0003',
+    name: 'Parasitic House',
+    mainPhoto: '@assets/img/project-1/project-3-cover.png',
+    galleryPhotos: [
+      ''
+    ]
+  },
+  {
+    id: '0004',
+    name: 'House Renovation',
+    mainPhoto: '@assets/img/project-1/project-4-cover.png',
+    galleryPhotos: [
+      ''
+    ]
+  }
+]

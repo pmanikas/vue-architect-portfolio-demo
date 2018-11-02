@@ -13,18 +13,21 @@
               .footerBottom
                 MapMemo
                 Credits
+        BottomSmudge
 </template>
 
 <script>
 import Compass from '@components/Compass'
 import MapMemo from '@components/MapMemo'
 import Credits from '@components/Credits'
+import BottomSmudge from '@components/BottomSmudge'
 export default {
   name: 'Footer',
   components: {
     Compass,
     MapMemo,
-    Credits
+    Credits,
+    BottomSmudge
   }
 }
 </script>

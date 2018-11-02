@@ -22,6 +22,7 @@ export default {
   .baseSection
     position: relative
     min-height: 100vh
+    min-width: 1px
     // border: 1px solid transparentize(white, 0.8) // DEV
   .full-height, .full-height > div
     min-height: 100vh

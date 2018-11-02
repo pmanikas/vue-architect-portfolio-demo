@@ -8,8 +8,8 @@
       .jar-md-90
         About
         Projects
-      .jar-md-10.jar-sm-hidden.jar-xs-hidden
-        Grass.hidden-xs.hidden-md-off
+      .jar-md-10.hidden-xs.hidden-md-off
+        Grass
     Footer
 </template>
 
