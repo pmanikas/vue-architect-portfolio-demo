@@ -69,5 +69,4 @@
     &:hover
       img.colored
         opacity: 1
-    
 </style>

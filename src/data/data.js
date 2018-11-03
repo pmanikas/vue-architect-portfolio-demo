@@ -181,6 +181,7 @@ export let projects = [
     id: '0001',
     name: 'Restoration of St. Achillios',
     mainPhoto: restorationOfStAchilliosCover,
+    decoration: 'seaman',
     galleryPhotos: [
       ''
     ]
@@ -189,6 +190,7 @@ export let projects = [
     id: '0002',
     name: 'Social Houses',
     mainPhoto: socialHousesCover,
+    decoration: 'light brokenLight doggyman',
     galleryPhotos: [
       ''
     ]
@@ -198,6 +200,7 @@ export let projects = [
     name: 'Parasitic House',
     mainPhoto: parasiticHouseCover,
     titlePosition: 'left',
+    decoration: 'bench',
     galleryPhotos: [
       ''
     ]
@@ -206,6 +209,7 @@ export let projects = [
     id: '0004',
     name: 'House Renovation',
     mainPhoto: houseRenovationCover,
+    decoration: 'light benchman',
     galleryPhotos: [
       ''
     ]
