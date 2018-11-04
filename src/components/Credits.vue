@@ -6,15 +6,16 @@
         router-link(to="skills") Lefteris Kapsalas
     
     .developer
-      BaseHorLine(:widthy="'100%'" :top="'-5px'" :left="'0'")
+      hr.chalkyHr
       p
         | Crafted by 
-        a(href='http://manikasdesign.eu', target='_blank') Pandelis Manikas
+        a(:href='owner.developerWebsite', target='_blank') {{ owner.developer }}
 
 </template>
 
 <script>
 import { owner } from '@data/data'
+
 export default {
   name: 'Credits',
   data() {
@@ -31,8 +32,8 @@ export default {
 .credits
   position: relative
   top: $base-spacing * 3
-  float: right
   width: 330px
+  margin: 0 auto $base-spacing
   text-align: center
   p
     padding: 0
@@ -44,4 +45,8 @@ export default {
   .designer, .developer
     position: relative
   
+@media(min-width: $desktop)
+  .credits
+    float: right
+    margin: 0 0 $base-spacing
 </style>
