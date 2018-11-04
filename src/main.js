@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from '@router'
+import VueCarousel from 'vue-carousel'
 import BaseVerLine from '@ui-components/BaseVerLine.vue'
 import BaseHorLine from '@ui-components/BaseHorLine.vue'
 import BaseArrowBack from '@ui-components/BaseArrowBack.vue'
+import BaseButton from '@ui-components/BaseButton.vue'
+import VueScrollTo from 'vue-scrollto'
 
-var VueScrollTo = require('vue-scrollto')
+Vue.config.productionTip = false
 
-Vue.use(VueScrollTo)
-
-// You can also pass in the default options
+Vue.use(VueCarousel)
 Vue.use(VueScrollTo, {
   container: 'body',
   duration: 500,
@@ -24,11 +25,10 @@ Vue.use(VueScrollTo, {
   y: true,
 })
 
-Vue.config.productionTip = false
-
 Vue.component('BaseVerLine', BaseVerLine)
 Vue.component('BaseHorLine', BaseHorLine)
 Vue.component('BaseArrowBack', BaseArrowBack)
+Vue.component('BaseButton', BaseButton)
 
 new Vue({
   router,
