@@ -8,9 +8,18 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes,
   mode: 'history',
-  scrollBehavior() {
+  // scrollBehavior() {
+  //   setTimeout(() => {
+  //     return window.scrollTo({ top: 0 })
+  //   }, 10)
+  // },
+  scrollBehavior(to, from, savedPosition) {
     setTimeout(() => {
-      return window.scrollTo({ top: 0 })
+      if (savedPosition) {
+        return savedPosition
+      } else {
+        return window.scrollTo({ top: 0 })
+      }
     }, 10)
   },
 })
