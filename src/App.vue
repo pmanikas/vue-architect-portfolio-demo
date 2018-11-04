@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    .background
+    Background
     .container-full
       .row
         .jar-xs-100
@@ -10,22 +10,24 @@
 </template>
 
 <script>
+import Background from '@components/Background'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Background
+  }
 }
 </script>
 
 <style lang="sass">
   @import '~@assets/style/main'
   .baseContent
-      padding: $size-content-padding 0
+    padding: $size-content-padding $base-spacing
   .baseSection
     position: relative
-    min-height: 100vh
     min-width: 1px
     // border: 1px solid transparentize(white, 0.8) // DEV
-  .fullHeight, .fullHeight > div
-    min-height: 100vh
 
   @media(min-width: $tablet)
     .baseContent
@@ -34,6 +36,10 @@ export default {
   @media(min-width: $desktop)
     .baseContent
       padding: $size-content-padding $size-content-padding/2
+    .baseSection
+      min-height: 100vh
+    .fullHeight, .fullHeight > div
+      min-height: 100vh
 
   @media(min-width: $widescreen)
     .baseContent

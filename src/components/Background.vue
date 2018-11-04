@@ -11,16 +11,16 @@ export default {
       scrollRatio: 0.1
     }
   },
-  methods: {
-    updateScroll() {
-      this.scrollPosition = Math.floor(-window.scrollY*this.scrollRatio);
-    }
-  },
   created() {
     window.addEventListener('scroll', this.updateScroll)
   },
   destroyed() {
     window.removeEventListener('scroll', this.updateScroll)
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = Math.floor(-window.scrollY*this.scrollRatio);
+    }
   }
 }
 </script>
@@ -32,4 +32,5 @@ export default {
     height: 100%
     background: url(~@assets/img/blackbord-bg.jpg)
     background-position: center top
+    transition: all .3s ease-out
 </style>

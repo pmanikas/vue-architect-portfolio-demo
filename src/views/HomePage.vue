@@ -1,6 +1,5 @@
 <template lang="pug">
   .homePage
-    Background
     .row
       .jar-xs-100
         Header
@@ -14,7 +13,6 @@
 </template>
 
 <script>
-import Background from '@components/Background'
 import Header from '@partials/Header'
 import Grass from '@partials/Grass'
 import About from '@partials/About'
@@ -24,7 +22,6 @@ import Footer from '@partials/Footer'
 export default {
   name: 'HomePage',
   components: {
-    Background,
     Header,
     Grass,
     About,
