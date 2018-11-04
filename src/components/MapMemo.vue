@@ -20,8 +20,9 @@
             .jar-xs-50
               BaseVerLine(:height="'250%'" :top="'-10%'" :left="'0'")
               .contactBtn
-                p CONTACT
-        .jar-md-50
+                router-link(to="contact") 
+                  p CONTACT
+        .jar-md-50.hidden-xs.hidden-md-off
           BaseVerLine(:height="'220%'" :top="'-10%'" :left="'0'")
           .doNotPress
             p DO NOT PRESS

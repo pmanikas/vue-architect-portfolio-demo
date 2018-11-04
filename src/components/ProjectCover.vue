@@ -35,17 +35,11 @@
 
 <style lang="sass" scoped>
   @import '~@assets/style/essentials'
-
   .projectCover
-    position: absolute
-    top: 45vh
-    left: 50%
     z-index: 10
-    width: 70%
     max-width: 100%
     padding: 5px 10px 0
-    transform: translateY(-50%) translateX(-50%)
-
+    margin-bottom: $base-spacing
     img
       width: 100%
       height: auto
@@ -59,6 +53,7 @@
         width: calc(100% - 20px)
         opacity: 0.2
         transition: opacity .3s ease-in-out
+
     .projectTitle
       position: absolute
       bottom: 0
@@ -66,7 +61,20 @@
         right: $base-spacing * 2
       &.left
         left: $base-spacing * 2
-    &:hover
-      img.colored
-        opacity: 1
+
+
+  @media(min-width: $desktop)
+    .projectCover
+      position: absolute
+      top: 45vh
+      left: 50%
+      width: 70%
+      margin-bottom: 0
+      transform: translateY(-50%) translateX(-50%)
+
+      
+      &:hover
+        img.colored
+          opacity: 1
+
 </style>

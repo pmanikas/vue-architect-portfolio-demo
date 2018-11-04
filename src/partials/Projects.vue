@@ -1,6 +1,6 @@
 <template lang="pug">
   .projects
-    BaseVerLine(:height="'400vh'" :top="'0vh'" :right="'0'")
+    BaseVerLine(:height="'400vh'" :top="'0vh'" :right="'0'").hidden-xs.hidden-md-off
     .projectItem.baseSection(v-for="(project, index) in projects" :key="index" :id="'project' + (index + 1)" :class="{ [project.decoration] : project.decoration }")
       .row
         .jar-md-25.hidden-xs.hidden-md-off
@@ -8,7 +8,7 @@
         .jar-md-75.fullHeight
           BaseVerLine(:height="'100vh'" :top="'0vh'" :left="'0'" :widthy="'10px'")
           .tiles
-          router-link(to="skills") 
+          router-link(:to="`project/${project.id}`") 
             ProjectCover(:projectCoverImg="project.mainPhoto" :projectTitle="project.name" :titlePosition="project.titlePosition")
           .decoration.hidden-xs.hidden-md-off
             .lightArea
@@ -43,15 +43,11 @@ export default {
   .projects
     position: relative
     .tiles
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100vh
       overflow: visible
       background: url(~@/assets/img/grid-tile.png) repeat
       background-position: 0% 0.1%
       background-size: 7.144% 10vh
+      @include fill
     .projectItem
       position: relative
       &.light
