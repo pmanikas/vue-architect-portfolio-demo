@@ -32,5 +32,4 @@ export default {
     height: 100%
     background: url(~@assets/img/blackbord-bg.jpg)
     background-position: center top
-    transition: all .3s ease-out
 </style>
