@@ -24,7 +24,7 @@
                   p CONTACT
         .jar-md-50.hidden-xs.hidden-md-off
           BaseVerLine(:height="'220%'" :top="'-10%'" :left="'0'")
-          .doNotPress
+          .doNotPress(@click="$emit('mess')")
             p DO NOT PRESS
     .outerLines
       BaseHorLine(:widthy="'104%'" :top="'0'" :left="'-2%'")

@@ -11,7 +11,7 @@
               .baseContent
                 Compass
               .footerBottom
-                MapMemo
+                MapMemo(v-on:mess="mess()")
                 Credits
         BottomSmudge
 </template>
@@ -28,6 +28,11 @@ export default {
     MapMemo,
     Credits,
     BottomSmudge
+  },
+  methods: {
+    mess() {
+      this.$emit('mess')
+    }
   }
 }
 </script>
