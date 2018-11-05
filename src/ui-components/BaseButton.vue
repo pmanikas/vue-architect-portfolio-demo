@@ -1,6 +1,6 @@
 <template lang="pug">
   .baseButton
-    button(:style="{width: widthy}") {{ text }}
+    button(:style="{width: widthy}" :disabled="disabled ? true : false") {{ text }}
 </template>
 
 <script>
@@ -14,6 +14,10 @@ export default {
     widthy: {
       type: String,
       default: 'auto'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -39,7 +43,8 @@ export default {
     letter-spacing: 5px
     cursor: pointer
     background: transparent
-    border: 5px solid transparent
+    border-style: solid
+    border-width: 5px
     border-image: url(~@assets/img/border.png) 10 round
     transition: background .3s ease-in-out
   &:hover
