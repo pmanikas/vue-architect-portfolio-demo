@@ -7,7 +7,10 @@ import BaseHorLine from '@ui-components/BaseHorLine.vue'
 import BaseArrowBack from '@ui-components/BaseArrowBack.vue'
 import BaseButton from '@ui-components/BaseButton.vue'
 import VueScrollTo from 'vue-scrollto'
-
+import VeeValidate from 'vee-validate'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
 Vue.config.productionTip = false
 
 Vue.use(VueCarousel)
@@ -24,6 +27,8 @@ Vue.use(VueScrollTo, {
   x: false,
   y: true,
 })
+Vue.use(VeeValidate)
+Vue.use(VueAxios, axios)
 
 Vue.component('BaseVerLine', BaseVerLine)
 Vue.component('BaseHorLine', BaseHorLine)
