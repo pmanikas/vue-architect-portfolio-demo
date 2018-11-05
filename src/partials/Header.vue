@@ -2,9 +2,10 @@
   .row
     .jar-xs-12
       .header.baseSection
-        .headerButton
-          .headerButtonInner
-            img(src="@assets/img/home-button.png")
+        .baseContent
+          .headerButton
+            .headerButtonInner
+              img(src="@assets/img/home-button.png")
         Smudge
 </template>
 
