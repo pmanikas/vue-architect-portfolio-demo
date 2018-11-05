@@ -5,7 +5,7 @@
       .row
         .jar-xs-100
           .router
-            transition(name="slide-right" mode="out-in")
+            transition(name="component-fade" mode="out-in")
               router-view
 </template>
 
