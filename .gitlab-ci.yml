@@ -1,10 +1,10 @@
-image: node:latest
+image: node:8
 
 stages:
     - deploy
 
 before_script:
-    - npm install npm-which
+    - npm install which
     - 'which ssh-agent || ( npm install openssh-clients)'
     - eval $(ssh-agent -s)
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
