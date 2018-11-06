@@ -4,15 +4,14 @@ stages:
     - deploy
 
 before_script:
-    - apk add yarn
-    - yarn add which
-    - 'which ssh-agent || ( yarn add openssh-clients)'
+    - npm install which
+    - 'which ssh-agent || ( npm install openssh-clients)'
     - eval $(ssh-agent -s)
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
     - mkdir -p ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-    - yarn install
-    - yarn build
+    - npm ci
+    - npm run build
 
 development:
     stage: deploy
