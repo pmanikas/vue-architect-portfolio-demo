@@ -1,6 +1,6 @@
 <template lang="pug">
-  .homePage
-    button.messed(v-if="messed" @click="unmess()") X
+  .homePage(@wheel="scrollViewport")
+    button.messed(v-if="messed" @click="unmessIt()") X
     .row
       .jar-xs-100
         Header
@@ -10,7 +10,7 @@
         Projects
       .jar-md-10.hidden-xs.hidden-md-off
         Grass
-    Footer(v-on:mess="mess()")
+    Footer(v-on:mess="messIt()")
 </template>
 
 <script>
@@ -19,6 +19,9 @@ import Grass from '@partials/Grass'
 import About from '@partials/About'
 import Projects from '@partials/Projects'
 import Footer from '@partials/Footer'
+import { mess, unmess } from '@utils/Mess'
+import { scrollTrigger } from '@utils/ScrollViewport'
+import { isDesktop } from '@utils/IsDesktop'
 
 export default {
   name: 'HomePage',
@@ -31,67 +34,45 @@ export default {
   },
   data() {
     return {
-      messed: false
+      messed: false,
+      mess: mess,
+      unmess: unmess,
+      scrollTrigger: scrollTrigger,
+      isDesktop: isDesktop,
+      scrollEnable: true
     }
   },
   created() {
-    // Cancel default scroll.
-    document.addEventListener('scoll', function(e) {
+    document.addEventListener('scroll', function(e){
+      e.stopImmediatePropagation();
       e.preventDefault();
-    });
-
-
-    // Use wheel event to simulate scroll.
-    document.addEventListener('wheel', function(e) {
-      e.preventDefault();
-      // #e1 is 100vh, get height in pixels for conversion rate.
-      var pxPerVh = window.innerHeight / 100;
-      
-      
-      // Current scroll.
-      var currScroll = document.documentElement.scrollTop || document.body.scrollTop;
-
-      var newScroll = 0;
-      
-      // Modify scroll 100 vh
-      if (e.wheelDelta < 0) { // scroll up
-        newScroll = currScroll + 100 * pxPerVh;
-      } else if (e.wheelDelta > 0) { // scroll down
-        newScroll = currScroll - 100 * pxPerVh;
-      } else { // no scroll
-        newScroll = currScroll;
-      }
-      console.log('p', e.wheelDelta, currScroll, newScroll, pxPerVh);
-
-      window.scrollTo({ top: newScroll, behavior: 'smooth' });
-    });
+    })
   },
   methods: {
-    mess() {
+    messIt() {
       this.messed = true;
-      let elDivA = document.querySelectorAll("p");
-      let elDivB = document.querySelectorAll("img");
-      let elDivC = document.querySelectorAll("span");
-      let elDivD = document.querySelectorAll(".homePage div");
-      elDivA.forEach(function(element){
-        element.classList.add('messA')
-      });
-      elDivB.forEach(function(element){
-        element.classList.add('messB')
-      });
-      elDivC.forEach(function(element){
-        element.classList.add('messC')
-      });
-      elDivD.forEach(function(element){
-        element.classList.add('messD')
-      })
+      this.mess();
     },
-    unmess() {
+    unmessIt() {
       this.messed = false;
-      let elDiv = document.querySelectorAll(".messA, .messB, .messC, .messD");
-      elDiv.forEach(function(element){
-        element.classList.remove("messA", "messB", "messC", "messD")
-      });
+      this.unmess();
+    },
+    scrollViewport(e) {
+      if(this.isDesktop()) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        if(this.scrollEnable) {
+          this.timer();
+          this.scrollTrigger(e)
+        }
+      }
+    },
+    timer() {
+      this.scrollEnable = false;
+      setTimeout(this.scrollTrue, 500)
+    },
+    scrollTrue() {
+      this.scrollEnable = true;
     }
   }
 }
@@ -112,4 +93,7 @@ export default {
   background: none
   border: none
   opacity: 0.5
+  transition: opacity .3s ease-in-out
+  &:hover
+    opacity: 1
 </style>
