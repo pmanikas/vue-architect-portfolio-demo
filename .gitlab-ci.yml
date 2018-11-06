@@ -16,7 +16,7 @@ before_script:
 prepare:
     stage: setup
     script:
-        -npm ci
+        - npm ci
 
 build:
     stage: build
