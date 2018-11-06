@@ -4,6 +4,7 @@ stages:
     - deploy
 
 before_script:
+    - apk add yarn
     - yarn add which
     - 'which ssh-agent || ( yarn add openssh-clients)'
     - eval $(ssh-agent -s)
