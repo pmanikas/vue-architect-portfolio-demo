@@ -7,24 +7,27 @@ before_script:
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
     - mkdir -p ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - npm ci
+
+
+development:
+    stage: build
+    script: 
+        - npm run build
+    only:
+        - master
+    environment: development
 
 
 development:
     stage: deploy
     script:
-        - npm ci
-
-    stage: build
-    script:
-        - npm run build
-    stage: copy
-    script:
         - ssh duratubp@eu1.getlark.com "rm -r -f www/dev.kapsalas-portfolio.eu/dist"
         - scp -v -C -r dist duratubp@eu1.getlark.com:www/dev.kapsalas-portfolio.eu
-
     only:
         - master
     environment: development
+
 
 production:
     stage: deploy
