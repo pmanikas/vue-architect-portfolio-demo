@@ -1,4 +1,4 @@
-image: node:8
+image: alpine:3.7
 
 stages:
     - deploy
