@@ -4,8 +4,8 @@ stages:
     - deploy
 
 before_script:
-    - npm install which -y
-    - 'which ssh-agent || ( npm install openssh-clients -y )'
+    - npm install which
+    - 'which ssh-agent || ( npm install openssh-clients)'
     - eval $(ssh-agent -s)
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
     - mkdir -p ~/.ssh
