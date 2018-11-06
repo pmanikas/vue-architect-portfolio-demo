@@ -1,5 +1,10 @@
 image: node:latest
 
+stages:
+    - setup
+    - build
+    - deploy
+
 before_script:
     - npm install which -y
     - 'which ssh-agent || ( npm install openssh-clients -y )'
@@ -8,8 +13,8 @@ before_script:
     - mkdir -p ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
-prebuild:
-    stage: pre-build
+prepare:
+    stage: setup
     scripts:
         -npm ci
 
