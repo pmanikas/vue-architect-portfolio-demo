@@ -7,15 +7,16 @@ before_script:
     - ssh-add <(echo "$SSH_PRIVATE_KEY")
     - mkdir -p ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-    - npm ci
 
+prebuild:
+    stage: pre-build
+    scripts:
+        -npm ci
 
 build:
     stage: build
     script: 
         - npm run build
-
-
 
 development-deploy:
     stage: deploy
