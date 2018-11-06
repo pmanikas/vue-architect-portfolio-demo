@@ -1,8 +1,5 @@
 image: node:latest
 
-stages:
-    - deploy
-
 before_script:
     - npm install which -y
     - 'which ssh-agent || ( npm install openssh-clients -y )'
