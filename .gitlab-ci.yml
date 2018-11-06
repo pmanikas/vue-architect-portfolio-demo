@@ -13,7 +13,12 @@ development:
     stage: deploy
     script:
         - npm ci
+
+    stage: build
+    script:
         - npm run build
+    stage: copy
+    script:
         - ssh duratubp@eu1.getlark.com "rm -r -f www/dev.kapsalas-portfolio.eu/dist"
         - scp -v -C -r dist duratubp@eu1.getlark.com:www/dev.kapsalas-portfolio.eu
 
