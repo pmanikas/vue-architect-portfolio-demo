@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { owner } from '@data/data'
 import Header from '@partials/Header'
 import Grass from '@partials/Grass'
 import About from '@partials/About'
@@ -25,6 +26,15 @@ import { isDesktop } from '@utils/IsDesktop'
 
 export default {
   name: 'HomePage',
+  metaInfo() {
+    return {
+      title: 'Architect Portfolio | Lefteris Kapsalas',
+      titleTemplate: null,
+      meta: [
+        { vmid: 'description', name: 'description', content: this.owner.description }
+      ]
+    }
+  },
   components: {
     Header,
     Grass,
@@ -34,6 +44,7 @@ export default {
   },
   data() {
     return {
+      owner: owner,
       messed: false,
       mess: mess,
       unmess: unmess,

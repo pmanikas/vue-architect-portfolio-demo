@@ -27,6 +27,11 @@ import { projects } from '@data/data'
 
 export default {
   name: 'ProjectPage',
+  metaInfo () {
+    return {
+      title: `${this.project.name} Project`
+    }
+  },
   data() {
     return {
       project: {

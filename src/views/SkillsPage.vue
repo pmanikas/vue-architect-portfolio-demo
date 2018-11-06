@@ -100,6 +100,9 @@ export default {
     Avatar,
     ContactInfo
   },
+  metaInfo: {
+    title: 'Skills'
+  },
   data() {
     return {
       owner: owner,

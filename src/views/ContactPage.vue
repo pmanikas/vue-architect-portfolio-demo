@@ -18,6 +18,9 @@ import ContactInfo from '@partials/ContactInfo'
 
 export default {
   name: 'ContactPage',
+  metaInfo: {
+    title: 'Contact'
+  },
   components: {
     ContactForm,
     ContactInfo

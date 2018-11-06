@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from '@router'
+import Meta from 'vue-meta'
 import VueCarousel from 'vue-carousel'
 import BaseVerLine from '@ui-components/BaseVerLine.vue'
 import BaseHorLine from '@ui-components/BaseHorLine.vue'
@@ -27,6 +28,7 @@ Vue.use(VueScrollTo, {
   x: false,
   y: true,
 })
+Vue.use(Meta)
 Vue.use(VeeValidate)
 Vue.use(VueAxios, axios)
 

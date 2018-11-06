@@ -14,6 +14,10 @@ import Background from '@components/Background'
 
 export default {
   name: 'App',
+  metaInfo: {
+    title: '[]',
+    titleTemplate: '%s | Architect Portfolio | Lefteris Kapsalas'
+  },
   components: {
     Background
   }
