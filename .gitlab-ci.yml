@@ -26,7 +26,6 @@ development:
         - master
     environment: development
 
-
 production:
     stage: deploy
     script:
