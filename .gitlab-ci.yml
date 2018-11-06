@@ -10,16 +10,14 @@ before_script:
     - npm ci
 
 
-development:
+build:
     stage: build
     script: 
         - npm run build
-    only:
-        - master
-    environment: development
 
 
-development:
+
+development-deploy:
     stage: deploy
     script:
         - ssh duratubp@eu1.getlark.com "rm -r -f www/dev.kapsalas-portfolio.eu/dist"
