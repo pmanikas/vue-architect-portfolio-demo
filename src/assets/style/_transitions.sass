@@ -1,33 +1,33 @@
-/* Slide Left
+// Slide Left
 
 .slide-left-enter-active, .slide-left-leave-active
   transition: transform 0.15s cubic-bezier(1, 0.5, 0.8, 1)
 
 .slide-left-enter
-  transform: translateX(100%)
   opacity: 1
+  transform: translateX(100%)
 
 .slide-left-leave-to
-  transform: translateX(-100%)
   opacity: 0
+  transform: translateX(-100%)
 
-/* Slide Right
+// Slide Right
 
 .slide-right-enter-active, .slide-right-leave-active
   transition: transform 0.3s cubic-bezier(1, 0.5, 0.8, 1)
 
 .slide-right-enter
-  transform: translateX(-100%)
   opacity: 1
   transition: transform 0.3s cubic-bezier(1, 0.5, 0.8, 1)
+  transform: translateX(-100%)
 
 .slide-right-leave-to
-  transform: translateX(100%)
   opacity: 0
   transition: transform 0.3s cubic-bezier(1, 0.5, 0.8, 1)
+  transform: translateX(100%)
 
 
-/* Fade
+// Fade
 
 .fade-enter-active, .fade-leave-active
   transition: opacity .15s
@@ -38,7 +38,7 @@
 .fade-enter, .fade-leave-active
   opacity: 0
 
-/* Component Fade
+// Component Fade
 
 .component-fade-enter-active, .component-fade-leave-active
   transition: opacity .3s ease
@@ -46,7 +46,7 @@
 .component-fade-enter, .component-fade-leave-to
   opacity: 0
 
-/* Bounce
+// Bounce
 
 .bounce-enter-active
   animation: bounce-in .5s

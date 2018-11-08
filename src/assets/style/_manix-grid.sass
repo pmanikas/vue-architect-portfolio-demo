@@ -4,41 +4,21 @@
 // Columns Rules -> jar-X-Y where X is the screen size we want breakpoint to be applied and Y the % number we want the column to possess with maximum 100%.
 @import 'sizes'
 
-.container
-	padding-right: $base-spacing
-	padding-left: $base-spacing
-	margin-right: auto
-	margin-left: auto
-	.row
-		margin-right: -$base-spacing
-		margin-left: -$base-spacing
-
-.container-full
-	padding: 0
-	width: 100%
-	.row
-		margin-left: 0
-		margin-right: 0
-		position: relative
-
 .row
-	&:before, &:after
+	&::before, &::after
 	    display: table
 	    content: " "
-	&:after
+	&::after
 		clear: both
-
-.no-outer-pads
-	margin-left: 0
-	margin-right: 0
-	> [class*=jar-]
-		padding-left: 0
-		padding-right: 0
-
-.jar-xs-10, .jar-sm-10, .jar-md-10, .jar-lg-10, .jar-xl-10, .jar-xs-15, .jar-sm-15, .jar-md-15, .jar-lg-15, .jar-xl-15, .jar-xs-20, .jar-sm-20, .jar-md-20, .jar-lg-20, .jar-xl-20, .jar-xs-25, .jar-sm-25, .jar-md-25, .jar-lg-25, .jar-xl-25, .jar-xs-30, .jar-sm-30, .jar-md-30, .jar-lg-30, .jar-xl-30, .jar-xs-33, .jar-sm-33, .jar-md-33, .jar-lg-33, .jar-xl-33, .jar-xs-40, .jar-sm-40, .jar-md-40, .jar-lg-40, .jar-xl-40, .jar-xs-50, .jar-sm-50, .jar-md-50, .jar-lg-50, .jar-xl-50, .jar-xs-60, .jar-sm-60, .jar-md-60, .jar-lg-60, .jar-xl-60,.jar-xs-65, .jar-sm-65, .jar-md-65, .jar-lg-65, .jar-xl-65, .jar-xs-66, .jar-sm-66, .jar-md-66, .jar-lg-66, .jar-xl-66, .jar-xs-70, .jar-sm-70, .jar-md-70, .jar-lg-70, .jar-xl-70, .jar-xs-75, .jar-sm-75, .jar-md-75, .jar-lg-75, .jar-xl-75, .jar-xs-80, .jar-sm-80, .jar-md-80, .jar-lg-80, .jar-xl-80, .jar-xs-85, .jar-sm-85, .jar-md-85, .jar-lg-85, .jar-xl-85, .jar-xs-90, .jar-sm-90, .jar-md-90, .jar-lg-90, .jar-xl-90, .jar-xs-100, .jar-sm-100, .jar-md-100, .jar-lg-100 .jar-xl-100
-	position: relative
-	min-height: 1px
+		
+.container-full
+	width: 100%
 	padding: 0
+	.row
+		position: relative
+		margin-right: 0
+		margin-left: 0
+		
 
 .jar-xs-10, .jar-xs-15, .jar-xs-20, .jar-xs-25, .jar-xs-30, .jar-xs-33, .jar-xs-40, .jar-xs-50, .jar-xs-60, .jar-xs-65,.jar-xs-66, .jar-xs-70, .jar-xs-75, .jar-xs-80, .jar-xs-85, .jar-xs-90
 	float: left
@@ -168,13 +148,31 @@
 
 .v-align-xs
 	display: flex
-	align-items: center
 	flex-direction: row
+	align-items: center
 
 .hidden-xs
 	display: none !important
 .hidden-xs-off
 	display: inherit !important
+
+.container
+	padding-right: $base-spacing
+	padding-left: $base-spacing
+	margin-right: auto
+	margin-left: auto
+	.row
+		margin-right: -$base-spacing
+		margin-left: -$base-spacing
+		.jar-xs-10, .jar-sm-10, .jar-md-10, .jar-lg-10, .jar-xl-10, .jar-xs-15, .jar-sm-15, .jar-md-15, .jar-lg-15, .jar-xl-15, .jar-xs-20, .jar-sm-20, .jar-md-20, .jar-lg-20, .jar-xl-20, .jar-xs-25, .jar-sm-25, .jar-md-25, .jar-lg-25, .jar-xl-25, .jar-xs-30, .jar-sm-30, .jar-md-30, .jar-lg-30, .jar-xl-30, .jar-xs-33, .jar-sm-33, .jar-md-33, .jar-lg-33, .jar-xl-33, .jar-xs-40, .jar-sm-40, .jar-md-40, .jar-lg-40, .jar-xl-40, .jar-xs-50, .jar-sm-50, .jar-md-50, .jar-lg-50, .jar-xl-50, .jar-xs-60, .jar-sm-60, .jar-md-60, .jar-lg-60, .jar-xl-60,.jar-xs-65, .jar-sm-65, .jar-md-65, .jar-lg-65, .jar-xl-65, .jar-xs-66, .jar-sm-66, .jar-md-66, .jar-lg-66, .jar-xl-66, .jar-xs-70, .jar-sm-70, .jar-md-70, .jar-lg-70, .jar-xl-70, .jar-xs-75, .jar-sm-75, .jar-md-75, .jar-lg-75, .jar-xl-75, .jar-xs-80, .jar-sm-80, .jar-md-80, .jar-lg-80, .jar-xl-80, .jar-xs-85, .jar-sm-85, .jar-md-85, .jar-lg-85, .jar-xl-85, .jar-xs-90, .jar-sm-90, .jar-md-90, .jar-lg-90, .jar-xl-90, .jar-xs-100, .jar-sm-100, .jar-md-100, .jar-lg-100 .jar-xl-100
+			padding-left: $base-spacing
+			padding-right: $base-spacing
+
+.jar-xs-10, .jar-sm-10, .jar-md-10, .jar-lg-10, .jar-xl-10, .jar-xs-15, .jar-sm-15, .jar-md-15, .jar-lg-15, .jar-xl-15, .jar-xs-20, .jar-sm-20, .jar-md-20, .jar-lg-20, .jar-xl-20, .jar-xs-25, .jar-sm-25, .jar-md-25, .jar-lg-25, .jar-xl-25, .jar-xs-30, .jar-sm-30, .jar-md-30, .jar-lg-30, .jar-xl-30, .jar-xs-33, .jar-sm-33, .jar-md-33, .jar-lg-33, .jar-xl-33, .jar-xs-40, .jar-sm-40, .jar-md-40, .jar-lg-40, .jar-xl-40, .jar-xs-50, .jar-sm-50, .jar-md-50, .jar-lg-50, .jar-xl-50, .jar-xs-60, .jar-sm-60, .jar-md-60, .jar-lg-60, .jar-xl-60,.jar-xs-65, .jar-sm-65, .jar-md-65, .jar-lg-65, .jar-xl-65, .jar-xs-66, .jar-sm-66, .jar-md-66, .jar-lg-66, .jar-xl-66, .jar-xs-70, .jar-sm-70, .jar-md-70, .jar-lg-70, .jar-xl-70, .jar-xs-75, .jar-sm-75, .jar-md-75, .jar-lg-75, .jar-xl-75, .jar-xs-80, .jar-sm-80, .jar-md-80, .jar-lg-80, .jar-xl-80, .jar-xs-85, .jar-sm-85, .jar-md-85, .jar-lg-85, .jar-xl-85, .jar-xs-90, .jar-sm-90, .jar-md-90, .jar-lg-90, .jar-xl-90, .jar-xs-100, .jar-sm-100, .jar-md-100, .jar-lg-100 .jar-xl-100
+	position: relative
+	min-height: 1px
+
+
 
 @media (min-width: $tablet)
 	.container
