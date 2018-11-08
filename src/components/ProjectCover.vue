@@ -1,9 +1,10 @@
 <template lang="pug">
-  .projectCover
-    BaseVerLine(:height="'110%'" :widthy="'12px'" :top="'-9%'" :left="'0'")
-    BaseVerLine(:height="'106%'" :widthy="'12px'" :top="'-3%'" :right="'0'")
-    BaseHorLine(:height="'12px'" :widthy="'104%'" :top="'0'" :left="'-3%'" )
-    BaseHorLine(:height="'12px'" :widthy="'105%'" :bottom="'0'" :left="'-2.5%'")
+  .projectCover(:class="{noBorders: !borders}")
+    .borders
+      BaseVerLine(:height="'110%'" :widthy="'12px'" :top="'-9%'" :left="'0'")
+      BaseVerLine(:height="'106%'" :widthy="'12px'" :top="'-3%'" :right="'0'")
+      BaseHorLine(:height="'12px'" :widthy="'104%'" :top="'0'" :left="'-3%'" )
+      BaseHorLine(:height="'12px'" :widthy="'105%'" :bottom="'0'" :left="'-2.5%'")
     img.filtered(:src="projectCoverImg" :alt="projectTitle")
     .projectTitle(:class="titlePosition")
     img.colored(:src="projectCoverImg" :alt="projectTitle")
@@ -28,6 +29,10 @@
       titlePosition: {
         type: String,
         default: 'right'
+      },
+      borders: {
+        type: Boolean,
+        default: true
       }
     }
   }
@@ -35,6 +40,7 @@
 
 <style lang="sass" scoped>
   @import '~@assets/style/essentials'
+
   .projectCover
     z-index: 10
     max-width: 100%
@@ -53,28 +59,21 @@
         width: calc(100% - 20px)
         opacity: 0.2
         transition: opacity .3s ease-in-out
-
     .projectTitle
       position: absolute
       bottom: 0
       &.right
         right: $base-spacing * 2
       &.left
-        left: $base-spacing * 2
-
+        left: $base-spacing * 2 
+    &.noBorders
+      padding: 0
+      .borders
+        display: none
 
   @media(min-width: $desktop)
     .projectCover
-      position: absolute
-      top: 45vh
-      left: 50%
-      width: 70%
-      margin-bottom: 0
-      transform: translateY(-50%) translateX(-50%)
-
-      
       &:hover
         img.colored
           opacity: 1
-
 </style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-  .projects
+  .projects#projects
     BaseVerLine(:height="'400vh'" :top="'0vh'" :right="'0'").hidden-xs.hidden-md-off
     .projectItem.baseSection(v-for="(project, index) in projects" :key="index" :id="'project' + (index + 1)" :class="{ [project.decoration] : project.decoration }")
       .row
@@ -101,4 +101,13 @@ export default {
           height: 183px
           background: url(~@assets/img/benchman.png) no-repeat
           background-size: contain
+
+  @media(min-width: $desktop)
+    .projectCover
+      position: absolute
+      top: 45vh
+      left: 50%
+      width: 72.8%
+      margin-bottom: 0
+      transform: translateY(-50%) translateX(-50%)
 </style>

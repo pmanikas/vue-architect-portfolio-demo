@@ -17,13 +17,23 @@
                 img(:src="project.mainPhoto")
               slide.projectSlide
                 img(:src="project.mainPhoto")
-            br
-            BaseArrowBack(:top="'0'" :left="'0'")
+      .row
+        .jar-xs-100
+          h2 Other Projects
+      .row.paddingRow
+        .jar-md-33(v-for="(project, index) in projects" v-if="project.id !== $route.params.projectId")
+          .projectItem
+            router-link(:to="`/project/${project.id}`") 
+              ProjectCover(:projectCoverImg="project.mainPhoto" :projectTitle="project.name" :borders="true")
+      .row
+        .jar-xs-100
+          BaseArrowBack(:top="'0'" :left="'0'")
 
 </template>
 
 <script>
 import { projects } from '@data/data'
+import ProjectCover from '@components/ProjectCover'
 
 export default {
   name: 'ProjectPage',
@@ -32,16 +42,30 @@ export default {
       title: `${this.project.name} Project`
     }
   },
+  components: {
+    ProjectCover
+  },
   data() {
     return {
       project: {
         name: String,
         gallery: Object
-      }
+      },
+      projects: projects
+    }
+  },
+  watch: {
+    "$route.params.projectId"() {
+      this.loadProject();
     }
   },
   mounted() {
-    this.project = projects.find(project => project.id === this.$route.params.projectId);
+    this.loadProject();
+  },
+  methods: {
+    loadProject() {
+      this.project = projects.find(project => project.id === this.$route.params.projectId);
+    }
   }
 }
 </script>
@@ -68,10 +92,7 @@ export default {
       &.VueCarousel-dot--active
         background: url(~@assets/img/active-box.png) no-repeat !important
         background-position: center
-        background-size: cover
-    
-    
-      
+        background-size: cover      
 </style>
 
 <style lang="sass" scoped>
@@ -82,4 +103,9 @@ export default {
     .projectSlide
       img
         width: 100%
+        
+.projectItem
+  height: 250px
+  .projectCover
+    position: relative
 </style>
