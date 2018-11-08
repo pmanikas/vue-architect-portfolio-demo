@@ -12,7 +12,7 @@ export default {
     },
     height: {
       type: String,
-      default: '70px'
+      default: '40px'
     },
     widthy: {
       type: String,
@@ -43,6 +43,10 @@ export default {
 
 .baseArrowBack
   position: absolute
+  display: inline-block
+  margin-right: $base-spacing
+  margin-bottom: $base-spacing * 2
+  vertical-align: middle
   cursor: pointer
   background-image: url(~@assets/img/arrow-back.png)
   background-repeat: no-repeat
