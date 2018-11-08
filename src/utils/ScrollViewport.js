@@ -1,4 +1,7 @@
+import Smoothscroll from 'smoothscroll-polyfill'
+
 export let scrollTrigger = (e) => {
+  Smoothscroll.polyfill();
   let newScroll = 0;
   let pxPerVh = window.innerHeight / 100;
   let currScroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -9,8 +12,8 @@ export let scrollTrigger = (e) => {
   }else { // no scroll
     newScroll = currScroll;
   }
-  console.log('SCROLL:', e.deltaY, currScroll, newScroll, pxPerVh);
-  window.scrollTo({ 
+  // console.log('SCROLL:', e.deltaY, currScroll, newScroll, pxPerVh);
+  window.scroll({
     top: newScroll, 
     left: 0,
     behavior: 'smooth' 
