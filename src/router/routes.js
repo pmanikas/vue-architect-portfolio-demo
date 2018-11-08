@@ -1,4 +1,5 @@
 import HomePage from '@views/HomePage.vue'
+import AboutPage from '@views/AboutPage.vue'
 import SkillsPage from '@views/SkillsPage.vue'
 import ProjectPage from '@views/ProjectPage.vue'
 import ContactPage from '@views/ContactPage.vue'
@@ -9,6 +10,11 @@ export default [
     path: '/',
     name: 'homepage',
     component: HomePage
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: AboutPage
   },
   {
     path: '/skills',
