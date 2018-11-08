@@ -7,7 +7,7 @@
       .mainMenuDisplay(v-if="active")
         ul.mainMenuList
           li(v-for="(menuItem, index) in menu" :key="index" @click="closeMenu()")
-            router-link(:to="menuItem.link") {{ menuItem.title }}
+            router-link(:to="{name:menuItem.link}") {{ menuItem.title }}
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
       menu: [
         {
           title: 'Home',
-          link: '/'
+          link: 'homepage'
         },
         {
           title: 'About',
