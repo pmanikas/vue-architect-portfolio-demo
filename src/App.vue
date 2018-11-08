@@ -4,6 +4,10 @@
     .container-full
       .row
         .jar-xs-100
+          Header
+          MainMenu
+      .row
+        .jar-xs-100
           .router
             transition(name="component-fade" mode="out-in")
               router-view
@@ -11,6 +15,8 @@
 
 <script>
 import Background from '@components/Background'
+import Header from '@partials/Header'
+import MainMenu from '@components/MainMenu'
 
 export default {
   name: 'App',
@@ -19,7 +25,9 @@ export default {
     titleTemplate: '%s | Architect Portfolio | Lefteris Kapsalas'
   },
   components: {
-    Background
+    Background,
+    Header,
+    MainMenu
   }
 }
 </script>

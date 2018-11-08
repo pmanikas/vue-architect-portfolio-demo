@@ -1,9 +1,6 @@
 <template lang="pug">
-  .homePage(@wheel="scrollViewport")
+  .homePage(@wheel="scrollViewport" :class="{rest: rest}")
     button.messed(v-if="messed" @click="unmessIt()") X
-    .row
-      .jar-xs-100
-        Header
     .row
       .jar-md-90
         About
@@ -15,7 +12,6 @@
 
 <script>
 import { owner } from '@data/data'
-import Header from '@partials/Header'
 import Grass from '@partials/Grass'
 import About from '@partials/About'
 import Projects from '@partials/Projects'
@@ -36,7 +32,6 @@ export default {
     }
   },
   components: {
-    Header,
     Grass,
     About,
     Projects,
@@ -50,14 +45,19 @@ export default {
       unmess: unmess,
       scrollTrigger: scrollTrigger,
       isDesktop: isDesktop,
-      scrollEnable: true
+      scrollEnable: true,
+      rest: false
     }
   },
-  created() {
+  mounted() {
     document.addEventListener('scroll', function(e){
-      e.stopImmediatePropagation();
       e.preventDefault();
     })
+  },
+  created() {
+    setTimeout(() => {
+      this.rest = true
+    }, 2000);
   },
   methods: {
     messIt() {
@@ -74,7 +74,7 @@ export default {
         e.preventDefault();
         if(this.scrollEnable) {
           this.timer();
-          this.scrollTrigger(e)
+          this.scrollTrigger(e);
         }
       }
     },
@@ -90,6 +90,15 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import '~@assets/style/essentials'
+
+.homePage
+  height: 100vh
+  overflow-y: hidden
+  &.rest
+    height: auto
+    overflow-y: auto
+
 .messed
   position: fixed
   top: 30px
