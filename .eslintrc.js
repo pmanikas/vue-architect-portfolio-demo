@@ -38,7 +38,7 @@ module.exports = {
         parser: 'babel-eslint',
         sourceType: 'module',
       },
-      env: { jest: true },
+      env: { jest: false },
       globals: {
         mount: false,
         shallowMount: false,
