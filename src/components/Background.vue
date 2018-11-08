@@ -12,7 +12,10 @@ export default {
     }
   },
   created() {
-    window.addEventListener('scroll', this.updateScroll)
+    window.addEventListener('scroll', this.updateScroll, {
+      capture: true,
+      passive: true
+    })
   },
   destroyed() {
     window.removeEventListener('scroll', this.updateScroll)
