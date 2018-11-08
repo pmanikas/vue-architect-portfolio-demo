@@ -21,7 +21,7 @@ Vue.use(VueScrollTo, {
   easing: 'ease-in-out',
   offset: 0,
   force: true,
-  cancelable: true,
+  cancelable: false,
   onStart: false,
   onDone: false,
   onCancel: false,
