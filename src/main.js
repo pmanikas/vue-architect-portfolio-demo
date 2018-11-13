@@ -15,7 +15,8 @@ import VueScrollTo from 'vue-scrollto'
 import VeeValidate from 'vee-validate'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
- 
+import './registerServiceWorker'
+
 Vue.config.productionTip = false
 
 Vue.use(VueCarousel)
