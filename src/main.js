@@ -36,12 +36,10 @@ Vue.use(Meta)
 Vue.use(VeeValidate)
 Vue.use(VueAxios, axios)
 
-const accessToken ='MC5XLXM2QVJJQUFDTUEwX2Zq.77-977-9IiLvv73vv70J77-977-9LO-_ve-_ve-_vVjvv71J77-9KnF_77-9C2p_bgpr77-977-9B--_vQ8'
 
 Vue.use(PrismicVue, {
   endpoint: window.prismic.endpoint,
-  linkResolver,
-  apiOptions: { accessToken }
+  linkResolver
 });
 
 Vue.component('BaseVerLine', BaseVerLine)
