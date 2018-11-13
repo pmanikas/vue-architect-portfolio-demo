@@ -9,7 +9,7 @@
       hr.chalkyHr
       p
         | Crafted by 
-        a(:href='owner.developerWebsite', target='_blank') {{ owner.developer }}
+        a(:href='owner.developerWebsite', target='_blank' rel="noopener") {{ owner.developer }}
 
 </template>
 
