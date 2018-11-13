@@ -36,7 +36,7 @@ Vue.use(Meta)
 Vue.use(VeeValidate)
 Vue.use(VueAxios, axios)
 
-const accessToken ='MC5XLXNsQ1JJQUFCOEEwNXFY.77-9PS5_TXLvv70FLu-_vV8C77-9ZQ9V77-977-977-977-977-977-9QGHvv73vv73vv71mSO-_ve-_vXc'
+const accessToken ='MC5XLXNuYkJJQUFCOEEwNlVp.77-977-9ee-_ve-_ve-_vU3vv70t77-977-9Re-_vTXvv73vv70K77-977-9Be-_ve-_vTE877-977-9FDnvv70qOu-_vQ'
 
 Vue.use(PrismicVue, {
   endpoint: window.prismic.endpoint,
