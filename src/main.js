@@ -4,7 +4,6 @@ import App from './App.vue'
 import router from '@router'
 import PrismicVue from 'prismic-vue'
 import linkResolver from '@utils/link-resolver'
-import htmlSerializer from '@utils/html-serializer'
 import Meta from 'vue-meta'
 import VueCarousel from 'vue-carousel'
 import BaseVerLine from '@ui-components/BaseVerLine.vue'
@@ -37,10 +36,12 @@ Vue.use(Meta)
 Vue.use(VeeValidate)
 Vue.use(VueAxios, axios)
 
+const accessToken ='MC5XLXNsQ1JJQUFCOEEwNXFY.77-9PS5_TXLvv70FLu-_vV8C77-9ZQ9V77-977-977-977-977-977-9QGHvv73vv73vv71mSO-_ve-_vXc'
+
 Vue.use(PrismicVue, {
   endpoint: window.prismic.endpoint,
   linkResolver,
-  htmlSerializer
+  apiOptions: { accessToken }
 });
 
 Vue.component('BaseVerLine', BaseVerLine)
@@ -48,11 +49,9 @@ Vue.component('BaseHorLine', BaseHorLine)
 Vue.component('BaseArrowBack', BaseArrowBack)
 Vue.component('BaseButton', BaseButton)
 
-const app = new Vue({
+new Vue({
   router,
   store,
   render: h => h(App),
-});
-
-app.$mount('#app');
+}).$mount('#app');
 
