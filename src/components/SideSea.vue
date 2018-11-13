@@ -4,8 +4,6 @@
 </template>
 
 <script>
-import { projects } from '@data/data'
-
 export default {
   name: 'SideSea',
   props: {
@@ -16,7 +14,12 @@ export default {
   },
   data() {
     return {
-      projects: projects
+      projects: [
+        'project1',
+        'project2',
+        'project3',
+        'project4'
+      ]
     }
   }
 }

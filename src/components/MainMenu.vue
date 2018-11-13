@@ -93,7 +93,7 @@ export default {
 
 @media(min-width: $desktop)
   .headerButton
-    transform: translateX(calc(84vw - 130px)) translateY(10vh)
+    transform: translateX(calc(84vw - 30px)) translateY(10vh)
   .homepageMainMenu.rest
     .headerButton
       transform: translateX(84vw) translateY(10vh)

@@ -1,8 +1,6 @@
 import avatar from '@assets/img/face.png'
-import restorationOfStAchilliosCover from '@assets/img/projects/project-1/restoration-of-st-achillios-cover.jpg'
-import socialHousesCover from '@assets/img/projects/project-2/socialhouses-cover.jpg'
-import parasiticHouseCover from '@assets/img/projects/project-3/parasitic-house-cover.jpg'
-import houseRenovationCover from '@assets/img/projects/project-4/house-renovation-cover.jpg'
+
+export const imageNotFound = require('@assets/img/image-not-found.jpg');
 
 export let owner = {
   name: 'Lefteris Kapsalas',
@@ -175,43 +173,3 @@ export let cv = {
     'FIRST AID TRAINED'
   ]
 }
-
-export let projects = [
-  {
-    id: '0001',
-    name: 'Restoration of St. Achillios',
-    mainPhoto: restorationOfStAchilliosCover,
-    decoration: 'seaman',
-    galleryPhotos: [
-      ''
-    ]
-  },
-  {
-    id: '0002',
-    name: 'Social Houses',
-    mainPhoto: socialHousesCover,
-    decoration: 'light brokenLight doggyman',
-    galleryPhotos: [
-      ''
-    ]
-  },
-  {
-    id: '0003',
-    name: 'Parasitic House',
-    mainPhoto: parasiticHouseCover,
-    titlePosition: 'left',
-    decoration: 'bench',
-    galleryPhotos: [
-      ''
-    ]
-  },
-  {
-    id: '0004',
-    name: 'House Renovation',
-    mainPhoto: houseRenovationCover,
-    decoration: 'light benchman',
-    galleryPhotos: [
-      ''
-    ]
-  }
-]
