@@ -14,6 +14,7 @@ import VueScrollTo from 'vue-scrollto'
 import VeeValidate from 'vee-validate'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import VueAnalytics from 'vue-analytics'
 import './registerServiceWorker'
 
 Vue.config.productionTip = false
@@ -35,11 +36,13 @@ Vue.use(VueScrollTo, {
 Vue.use(Meta)
 Vue.use(VeeValidate)
 Vue.use(VueAxios, axios)
-
-
 Vue.use(PrismicVue, {
   endpoint: window.prismic.endpoint,
   linkResolver
+});
+Vue.use(VueAnalytics, {
+  id: 'UA-60861135-12',
+  router
 });
 
 Vue.component('BaseVerLine', BaseVerLine)
