@@ -40,7 +40,7 @@ export default {
   created() {
     setTimeout(() => {
       this.rest = true
-    }, 2000);
+    }, 1000);
   },
   methods: {
     toggleMenu() {
