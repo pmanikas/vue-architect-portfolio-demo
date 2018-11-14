@@ -34,7 +34,7 @@ import { SendMail } from '@services/SendMail'
 
 const mailEndpoint = process.env.NODE_ENV === 'production'
   ? 'https://kapsalas-portfolio.eu/maily/mail.php'
-  : 'https://dev.kapsalas-portfolio.eu/maily/mail.php'
+  : 'https://dev.kapsalas-portfolio.eu/maily/mail-dev.php'
 
 export default {
   name: 'ContactForm',
