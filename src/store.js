@@ -25,7 +25,7 @@ export default new Vuex.Store({
         Vue.prototype.$prismic.Predicates.at('document.type', 'projects'), 
         { orderings: '[document.first_publication_date]' }
       ).then(response => {
-        console.log(response);
+        // console.log(response);
         const cards = response.results.map(({data, uid}) => {
           return {
             uid: uid,
@@ -35,7 +35,7 @@ export default new Vuex.Store({
           }
         });
         commit('setProjectCards', cards);
-        console.log('setProjectCards', cards);
+        // console.log('setProjectCards', cards);
       }).catch((error) => {
         console.log(error);
         const cards = {
@@ -50,7 +50,7 @@ export default new Vuex.Store({
     getProject({commit, state}, uid) {
       return Vue.prototype.$prismic.client.getByUID('projects', uid)
         .then((response) => {
-          console.log('project newQuery response', response);
+          // console.log('project newQuery response', response);
           const project = {
             uid: uid,
             title: response.data.title[0].text,
@@ -60,7 +60,7 @@ export default new Vuex.Store({
             gallery: response.data.gallery || null
           };
         commit('setProject', project);
-        console.log('project newQuery', project);
+        // console.log('project newQuery', project);
         return project
       }).catch((error) => {
         console.log(error);
