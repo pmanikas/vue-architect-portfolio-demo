@@ -32,6 +32,10 @@
 <script>
 import { SendMail } from '@services/SendMail'
 
+const mailEndpoint = process.env.NODE_ENV === 'production'
+  ? 'https://kapsalas-portfolio.eu/maily/mail.php'
+  : 'https://dev.kapsalas-portfolio.eu/maily/mail.php'
+
 export default {
   name: 'ContactForm',
   
@@ -53,7 +57,7 @@ export default {
     sendMessage() {
       this.$validator.validateAll().then(res=>{
         if(res) {
-          this.sendMail('https://maily.kapsalas-portfolio.eu/mail.php', this.form).then((response) => {
+          this.sendMail(mailEndpoint, this.form).then((response) => {
             this.responseStatus = response.status;
             this.formEnabled = false;
             if(this.responseStatus === 200){
