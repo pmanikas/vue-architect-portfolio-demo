@@ -11,11 +11,11 @@ before_script:
     - mkdir -p ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
     - npm ci
-    - npm run build
 
 development:
     stage: deploy
     script:
+        - npm run build --mode development
         - ssh duratubp@eu1.getlark.com "rm -r -f www/dev.kapsalas-portfolio.eu/dist"
         - scp -v -C -r dist duratubp@eu1.getlark.com:www/dev.kapsalas-portfolio.eu
     except:
@@ -26,8 +26,9 @@ development:
 production:
     stage: deploy
     script:
-        - ssh duratubp@eu1.getlark.com "rm -r -f www/dev.kapsalas-portfolio.eu/dist"
-        - scp -C -r dist duratubp@eu1.getlark.com:www/dev.kapsalas-portfolio.eu
+        - npm run build
+        - ssh duratubp@eu1.getlark.com "rm -r -f www/kapsalas-portfolio.eu/dist"
+        - scp -C -r dist duratubp@eu1.getlark.com:www/kapsalas-portfolio.eu
     only:
         - release
     environment: production
