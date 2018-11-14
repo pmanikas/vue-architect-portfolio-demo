@@ -19,7 +19,7 @@
         }
 
         // Set the recipient email address.
-        $recipient = "pmanikas.social@gmail.com";
+        $recipient = "info@kapsalas-portfolio.eu";
 
         // Set the email subject.
         $subject = "New contact from $name";
