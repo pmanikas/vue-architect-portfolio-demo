@@ -45,4 +45,5 @@ export default {
   .footerBottom
     position: relative
     top: 170px
+    padding: 0 $base-spacing
 </style>

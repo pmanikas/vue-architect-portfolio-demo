@@ -20,8 +20,11 @@
         .row
           .jar-xs-100
             h2 Other Projects
-        .row.paddingRow
-          .jar-md-33(v-for="(card, index) in relatedProjectCards")
+        carousel.projectCarousel(
+          :perPageCustom="[[0, 1],[768, 2], [992, 3]]"
+          :navigationEnabled="false", 
+          :paginationEnabled="true")
+          slide(v-for="(card, index) in relatedProjectCards")
             .projectItem
               router-link(:to="`/project/${card.uid}`") 
                 ProjectCover(:projectCoverImg="card.cover || imageNotFound" :projectTitle="card.title" :borders="true")
