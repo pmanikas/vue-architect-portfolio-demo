@@ -34,6 +34,9 @@ export default {
 
 <style lang="sass">
   @import '~@assets/style/main'
+  body
+    overflow-x: hidden
+    overflow-y: scroll !important
   .baseContent
     padding: $size-content-padding $base-spacing
   .baseSection

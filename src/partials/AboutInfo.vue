@@ -22,9 +22,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-.profileInfo
-  transition: transform 1s ease-in-out
-  transform: scale(0)
-</style>

@@ -6,8 +6,8 @@
           .row
             //- .jar-xs-25
             .jar-md-75.jar-md-push-25
-              BaseVerLine(:height="'60vh'" :widthy="'10px'" :top="'0'" :left="'0'")
-              BaseVerLine(:height="'30vh'" :top="'0'" :right="'0'")
+              BaseVerLine.hidden-xs.hidden-md-off(:height="'60vh'" :widthy="'10px'" :top="'0'" :left="'0'")
+              BaseVerLine.hidden-xs.hidden-md-off(:height="'30vh'" :top="'0'" :right="'0'")
               .baseContent
                 Compass
               .footerBottom

@@ -7,7 +7,7 @@
           .jar-md-25.hidden-xs.hidden-md-off
             SideSea(:check="index")
           .jar-md-75.fullHeight
-            BaseVerLine(:height="'100vh'" :top="'0vh'" :left="'0'" :widthy="'10px'")
+            BaseVerLine.hidden-xs.hidden-md-off(:height="'100vh'" :top="'0vh'" :left="'0'" :widthy="'10px'")
             .tiles
             router-link(:to="`project/${project.uid}`")
               ProjectCover(:projectCoverImg="project.cover" :projectTitle="project.title")
@@ -22,7 +22,7 @@
 <script>
 import SideSea from '@components/SideSea'
 import ProjectCover from '@components/ProjectCover'
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 import store from '@store'
 
 export default {
@@ -47,14 +47,19 @@ export default {
 
   .projects
     position: relative
+    overflow: hidden
+    max-width: 100vw
   .tiles
     overflow: visible
     background: url(~@/assets/img/grid-tile.png) repeat
     background-position: 0% 0.1%
     background-size: 7.144% 10vh
+    min-height: 50vh
     @include fill
   .projectItem
     position: relative
+    min-height: 50vh
+
   .projectItem:nth-of-type(1)
     .seamanArea
       position: absolute
@@ -111,12 +116,12 @@ export default {
       background: url(~@assets/img/benchman.png) no-repeat
       background-size: contain
 
-  @media(min-width: $desktop)
+  @media (min-width: $desktop)
     .projectCover
       position: absolute
       top: 45vh
       left: 50%
       width: 72.8%
-      margin-bottom: 0
+      margin: 0
       transform: translateY(-50%) translateX(-50%)
 </style>
