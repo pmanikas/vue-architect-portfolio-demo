@@ -24,7 +24,7 @@
           :perPageCustom="[[0, 1],[768, 2], [992, 3]]"
           :navigationEnabled="false", 
           :paginationEnabled="true")
-          slide(v-for="(card, index) in relatedProjectCards")
+          slide(v-for="(card, index) in relatedProjectCards" :key="index")
             .projectItem
               router-link(:to="`/project/${card.uid}`") 
                 ProjectCover(:projectCoverImg="card.cover || imageNotFound" :projectTitle="card.title" :borders="true")

@@ -1,6 +1,6 @@
 <template lang="pug">
   .sideSea(:class="check")
-    a.check(v-for="(project, index) in projects" :class="{ active: index === check }" v-scroll-to="'#project' + (index + 1)")
+    a.check(v-for="(project, index) in projects" :class="{ active: index === check }" v-scroll-to="'#project' + (index + 1)" :key="index")
 </template>
 
 <script>
