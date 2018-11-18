@@ -1,6 +1,7 @@
 <template lang="pug">
   .aboutInfo
     Avatar
+    h1(v-if="heading") {{ heading }}
     .profileText
       p {{owner.description}}
         
@@ -14,6 +15,12 @@ export default {
   name: 'AboutInfo',
   components: {
     Avatar
+  },
+  props: {
+    heading: {
+      type: String,
+      default: null
+    }
   },
   data() {
     return {

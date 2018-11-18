@@ -3,7 +3,7 @@
     .container
       .row
         .jar-xs-100
-          h1 About
+          h1 About Lefters Kapsalas
       .row
         .jar-md-60
           AboutInfo
