@@ -3,13 +3,15 @@
     .designer
       p
         | Designed by 
-        router-link(to="skills") Lefteris Kapsalas
+        router-link(:to="{ name: 'skills' }")
+          | Lefteris Kapsalas
     
     .developer
       hr.chalkyHr
       p
         | Crafted by 
-        a(:href='owner.developerWebsite', target='_blank' rel="noopener") {{ owner.developer }}
+        a(:href='owner.developerWebsite', target='_blank' rel="noopener")
+          | {{ owner.developer }}
 
 </template>
 

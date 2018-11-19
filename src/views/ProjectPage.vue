@@ -16,11 +16,10 @@
                   img(:src="project.cover || imageNotFound" :alt="project.title")
                 slide.projectSlide(v-if="project.gallery !== null" v-for="(galleryItem, index) in project.gallery" :key="index")
                   img(:src="galleryItem.carouselitem[0].url || imageNotFound" :alt="`${project.title} gallery ${index + 1}`")
-
         .row
           .jar-xs-100
             h2 Other Projects
-        carousel.projectCarousel(
+        carousel.projectCarouselMore(
           :perPageCustom="[[0, 1],[768, 2], [992, 3]]"
           :navigationEnabled="false", 
           :paginationEnabled="true")
@@ -29,8 +28,18 @@
               router-link(:to="`/project/${card.uid}`") 
                 ProjectCover(:projectCoverImg="card.cover || imageNotFound" :projectTitle="card.title" :borders="true")
         .row
-          .jar-xs-100
+          .jar-xs-50
             BaseArrowBack(:top="'0'" :left="'0'")
+          .jar-xs-50
+            .CompassArea(style="text-align: right")
+              Compass
+        br
+        br
+        .row
+          .jar-xs-100
+            MapMemo
+            Credits
+            BottomSmudge
 
 </template>
 
@@ -40,6 +49,10 @@ import Prism from "prismjs"
 import { mapState } from "vuex"
 import store from '@store'
 import imageNotFound from '@assets/img/image-not-found.jpg'
+import Compass from '@components/Compass'
+import MapMemo from '@components/MapMemo'
+import Credits from '@components/Credits'
+import BottomSmudge from '@components/BottomSmudge'
 
 export default {
   name: 'ProjectPage',
@@ -49,7 +62,11 @@ export default {
     }
   },
   components: {
-    ProjectCover
+    ProjectCover,
+    Compass,
+    MapMemo,
+    Credits,
+    BottomSmudge
   },
   data() {
     return {
@@ -124,7 +141,10 @@ export default {
       &.VueCarousel-dot--active
         background: url(~@assets/img/active-box.png) no-repeat !important
         background-position: center
-        background-size: cover      
+        background-size: cover    
+.projectCarouselMore
+  .VueCarousel-slide
+    padding: 0 $base-spacing / 2  
 </style>
 
 <style lang="sass" scoped>

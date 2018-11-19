@@ -1,5 +1,6 @@
 <template lang="pug">
   .mapMemo
+    button.messed(v-if="messed" @click="unmessIt") X
     .container-full
       .row
         .jar-md-50
@@ -15,16 +16,16 @@
                 .jar-xs-50
                   BaseVerLine(:height="'230%'" :top="'-10%'" :left="'0'")
                   .cvBtn
-                    router-link(to="skills") 
+                    router-link(:to="{ name: 'skills' }") 
                       p CV
             .jar-xs-50
               BaseVerLine(:height="'250%'" :top="'-10%'" :left="'0'")
               .contactBtn
-                router-link(to="contact") 
+                router-link(:to="{ name: 'contact' }") 
                   p CONTACT
         .jar-md-50.hidden-xs.hidden-md-off
           BaseVerLine(:height="'220%'" :top="'-10%'" :left="'0'")
-          .doNotPress(@click="$emit('mess')")
+          .doNotPress(@click="messIt")
             p DO NOT PRESS
     .outerLines
       BaseHorLine(:widthy="'104%'" :top="'0'" :left="'-2%'")
@@ -35,18 +36,50 @@
 </template>
 
 <script>
+import { mess, unmess } from '@utils/Mess'
+
 export default {
   name: 'MapMemo',
-  methods: {
-    mess() {
-      return ""
+  data() {
+    return {
+      messed: false,
+      mess: mess,
+      unmess: unmess,
     }
+  },
+  methods: {
+    messIt() {
+      this.messed = true;
+      this.mess();
+    },
+    unmessIt() {
+      this.messed = false;
+      this.unmess();
+    },
   }
 }
 </script>
 
 <style lang="sass" scoped>
   @import '~@assets/style/essentials'
+
+  .messed
+    position: fixed
+    top: 30px
+    right: 30px
+    z-index: 10
+    width: 100px
+    height: 100px
+    font-size: 10rem
+    font-weight: bold
+    color: #6fe7db
+    cursor: pointer
+    background: none
+    border: none
+    opacity: 0.5
+    transition: opacity .3s ease-in-out
+    &:hover
+      opacity: 1
 
   .mapMemo
     position: relative

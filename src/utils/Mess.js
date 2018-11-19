@@ -2,7 +2,7 @@ export const mess = () => {
   let elA = document.querySelectorAll("p");
   let elB = document.querySelectorAll("img");
   let elC = document.querySelectorAll("span");
-  let elD = document.querySelectorAll(".homePage div");
+  let elD = document.querySelectorAll(".row");
   elA.forEach(function(element){
     element.classList.add('messA')
   });
