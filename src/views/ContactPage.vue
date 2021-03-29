@@ -35,7 +35,7 @@ import BottomSmudge from '@components/BottomSmudge'
 export default {
   name: 'ContactPage',
   metaInfo: {
-    title: 'Contact'
+    title: 'Contact',
   },
   components: {
     ContactForm,
@@ -43,7 +43,7 @@ export default {
     Compass,
     MapMemo,
     Credits,
-    BottomSmudge
-  }
+    BottomSmudge,
+  },
 }
 </script>

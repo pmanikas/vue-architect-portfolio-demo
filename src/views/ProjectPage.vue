@@ -45,8 +45,8 @@
 
 <script>
 import ProjectCover from '@components/ProjectCover'
-import Prism from "prismjs"
-import { mapState } from "vuex"
+import Prism from 'prismjs'
+import { mapState } from 'vuex'
 import store from '@store'
 import imageNotFound from '@assets/img/image-not-found.jpg'
 import Compass from '@components/Compass'
@@ -56,9 +56,9 @@ import BottomSmudge from '@components/BottomSmudge'
 
 export default {
   name: 'ProjectPage',
-  metaInfo () {
+  metaInfo() {
     return {
-      title: `${this.project.title} Project`
+      title: `${this.project.title} Project`,
     }
   },
   components: {
@@ -66,55 +66,60 @@ export default {
     Compass,
     MapMemo,
     Credits,
-    BottomSmudge
+    BottomSmudge,
   },
   data() {
     return {
-      imageNotFound: imageNotFound
+      imageNotFound: imageNotFound,
     }
   },
   computed: {
-    ...mapState([
-      'cards',
-      'project'
-    ]),
+    ...mapState(['cards', 'project']),
     relatedProjectCards() {
-      return this.$store.getters.relatedProjectCards(this.$route.params.projectId)
-    }
+      return this.$store.getters.relatedProjectCards(
+        this.$route.params.projectId
+      )
+    },
   },
   methods: {
     refresh() {
       this.$nextTick(() => {
-        Prism.highlightAll();
-      });
+        Prism.highlightAll()
+      })
     },
   },
-    beforeRouteUpdate(to, from, next) {
-    store.dispatch('getProject', to.params.projectId).then(() => {
-      this.refresh();
-      next()
-    }).catch(() => {
-      next(vm => {
-        vm.$router.push({name: '404'});
+  beforeRouteUpdate(to, from, next) {
+    store
+      .dispatch('getProject', to.params.projectId)
+      .then(() => {
+        this.refresh()
+        next()
       })
-    });
+      .catch(() => {
+        next(vm => {
+          vm.$router.push({ name: '404' })
+        })
+      })
   },
   beforeRouteEnter(to, from, next) {
-    store.dispatch('getProject', to.params.projectId).then(function () {
-      next(vm => {
-        vm.refresh();
+    store
+      .dispatch('getProject', to.params.projectId)
+      .then(function () {
+        next(vm => {
+          vm.refresh()
+        })
       })
-    }).catch(() => {
-      next(vm => {
-        vm.$router.push({name: '404'});
+      .catch(() => {
+        next(vm => {
+          vm.$router.push({ name: '404' })
+        })
       })
-    });
     store.dispatch('getProjectCards').then(function () {
       next(vm => {
-        vm.refresh();
+        vm.refresh()
       })
-    });
-  }
+    })
+  },
 }
 </script>
 
@@ -141,10 +146,10 @@ export default {
       &.VueCarousel-dot--active
         background: url(~@assets/img/active-box.png) no-repeat !important
         background-position: center
-        background-size: cover    
+        background-size: cover
 .projectCarouselMore
   .VueCarousel-slide
-    padding: 0 $base-spacing / 2  
+    padding: 0 $base-spacing / 2
 </style>
 
 <style lang="sass" scoped>
@@ -155,7 +160,7 @@ export default {
     .projectSlide
       img
         width: 100%
-        
+
 .projectItem
   height: 250px
   .projectCover

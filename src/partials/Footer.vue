@@ -26,8 +26,8 @@ export default {
     Compass,
     MapMemo,
     Credits,
-    BottomSmudge
-  }
+    BottomSmudge,
+  },
 }
 </script>
 

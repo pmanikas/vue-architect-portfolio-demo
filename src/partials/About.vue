@@ -22,7 +22,7 @@ export default {
   components: {
     AboutInfo,
     Smudge,
-    Steps
-  }
+    Steps,
+  },
 }
 </script>

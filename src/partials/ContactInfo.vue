@@ -18,8 +18,8 @@ export default {
   name: 'ContactInfo',
   data() {
     return {
-      owner: owner
+      owner: owner,
     }
-  }
+  },
 }
 </script>

@@ -8,29 +8,29 @@ export default {
   props: {
     height: {
       type: String,
-      default: '100vh'
+      default: '100vh',
     },
     widthy: {
       type: String,
-      default: '6px'
+      default: '6px',
     },
     left: {
       type: String,
-      default: 'unset'
+      default: 'unset',
     },
     right: {
       type: String,
-      default: 'unset'
+      default: 'unset',
     },
     top: {
       type: String,
-      default: 'unset'
+      default: 'unset',
     },
     bottom: {
       type: String,
-      default: 'unset'
-    }
-  }
+      default: 'unset',
+    },
+  },
 }
 </script>
 

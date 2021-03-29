@@ -8,33 +8,33 @@ export default {
   props: {
     position: {
       type: String,
-      default: 'static'
+      default: 'static',
     },
     height: {
       type: String,
-      default: '40px'
+      default: '40px',
     },
     widthy: {
       type: String,
-      default: '70px'
+      default: '70px',
     },
     left: {
       type: String,
-      default: 'unset'
+      default: 'unset',
     },
     right: {
       type: String,
-      default: 'unset'
+      default: 'unset',
     },
     top: {
       type: String,
-      default: 'unset'
+      default: 'unset',
     },
     bottom: {
       type: String,
-      default: 'unset'
-    }
-  }
+      default: 'unset',
+    },
+  },
 }
 </script>
 

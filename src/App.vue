@@ -22,43 +22,42 @@ export default {
   name: 'App',
   metaInfo: {
     title: '[]',
-    titleTemplate: '%s | Architect Portfolio | Lefteris Kapsalas'
+    titleTemplate: '%s | Architect Portfolio | Lefteris Kapsalas',
   },
   components: {
     Background,
     Header,
-    MainMenu
-  }
+    MainMenu,
+  },
 }
 </script>
 
 <style lang="sass">
-  @import '~@assets/style/main'
-  body
-    overflow-x: hidden
-    overflow-y: scroll !important
+@import '~@assets/style/main'
+body
+  overflow-x: hidden
+  overflow-y: scroll !important
+.baseContent
+  padding: $size-content-padding $base-spacing
+.baseSection
+  position: relative
+  min-width: 1px
+
+@media(min-width: $tablet)
   .baseContent
-    padding: $size-content-padding $base-spacing
+    padding: $size-content-padding $size-content-padding/3
+
+@media(min-width: $desktop)
+  .baseContent
+    padding: $size-content-padding $size-content-padding/2
   .baseSection
-    position: relative
-    min-width: 1px
-    // border: 1px solid transparentize(white, 0.8) // DEV
+    min-height: 100vh
+  .fullHeight, .fullHeight > div
+    min-height: 100vh
 
-  @media(min-width: $tablet)
-    .baseContent
-      padding: $size-content-padding $size-content-padding/3
-
-  @media(min-width: $desktop)
-    .baseContent
-      padding: $size-content-padding $size-content-padding/2
-    .baseSection
-      min-height: 100vh
-    .fullHeight, .fullHeight > div
-      min-height: 100vh
-
-  @media(min-width: $widescreen)
-    .baseContent
-      padding: $size-content-padding
+@media(min-width: $widescreen)
+  .baseContent
+    padding: $size-content-padding
 </style>
 
 <style lang="sass" scoped>

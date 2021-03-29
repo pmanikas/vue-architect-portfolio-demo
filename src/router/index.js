@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     setTimeout(() => {
       return window.scrollTo({ top: 0 })
     }, 10)

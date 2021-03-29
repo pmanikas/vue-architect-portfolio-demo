@@ -7,14 +7,14 @@ export default {
   name: 'Header',
   data() {
     return {
-      rest: false
+      rest: false,
     }
   },
   mounted() {
     setTimeout(() => {
       this.rest = true
-    }, 2000);
-  }
+    }, 2000)
+  },
 }
 </script>
 

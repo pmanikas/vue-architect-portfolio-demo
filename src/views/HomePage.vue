@@ -25,15 +25,19 @@ export default {
       title: 'Architect Portfolio | Lefteris Kapsalas',
       titleTemplate: null,
       meta: [
-        { vmid: 'description', name: 'description', content: this.owner.description }
-      ]
+        {
+          vmid: 'description',
+          name: 'description',
+          content: this.owner.description,
+        },
+      ],
     }
   },
   components: {
     Grass,
     About,
     Projects,
-    Footer
+    Footer,
   },
   data() {
     return {
@@ -41,32 +45,32 @@ export default {
       scrollTrigger: scrollTrigger,
       isDesktop: isDesktop,
       scrollEnable: true,
-      rest: false
+      rest: false,
     }
   },
   mounted() {
-    document.addEventListener('scroll', function(e){
-      e.preventDefault();
+    document.addEventListener('scroll', function (e) {
+      e.preventDefault()
     })
   },
   created() {
     setTimeout(() => {
       this.rest = true
-    }, 1000);
+    }, 1000)
   },
   methods: {
     scrollViewport(e) {
-      if(this.isDesktop) {
-        e.stopImmediatePropagation();
-        e.preventDefault();
-        if(this.scrollEnable) {
-          this.scrollEnable = false;
-          setTimeout(() => (this.scrollEnable = true), 500);
-          this.scrollTrigger(e);
+      if (this.isDesktop) {
+        e.stopImmediatePropagation()
+        e.preventDefault()
+        if (this.scrollEnable) {
+          this.scrollEnable = false
+          setTimeout(() => (this.scrollEnable = true), 500)
+          this.scrollTrigger(e)
         }
       }
-    }
-  }
+    },
+  },
 }
 </script>
 

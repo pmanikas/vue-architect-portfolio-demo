@@ -22,9 +22,9 @@ export default {
   name: 'Credits',
   data() {
     return {
-      owner: owner
+      owner: owner,
     }
-  }
+  },
 }
 </script>
 
@@ -46,7 +46,7 @@ export default {
     color: transparentize($main-font-color, 0.3)
   .designer, .developer
     position: relative
-  
+
 @media(min-width: $desktop)
   .credits
     float: right

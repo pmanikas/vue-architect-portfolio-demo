@@ -100,7 +100,7 @@
 </template>
 
 <script>
-import {owner, cv} from '@data/data'
+import { owner, cv } from '@data/data'
 import Avatar from '@components/Avatar'
 import ContactInfo from '@partials/ContactInfo'
 import Compass from '@components/Compass'
@@ -116,17 +116,17 @@ export default {
     Compass,
     MapMemo,
     Credits,
-    BottomSmudge
+    BottomSmudge,
   },
   metaInfo: {
-    title: 'Skills'
+    title: 'Skills',
   },
   data() {
     return {
       owner: owner,
-      cv: cv
+      cv: cv,
     }
-  }
+  },
 }
 </script>
 
@@ -151,7 +151,7 @@ export default {
       &::before
         padding: 0 $base-spacing
         content: '->'
-  
+
 
   @media(min-width: $desktop)
     .languages
@@ -162,7 +162,7 @@ export default {
       .languageName~.languageLevel
         &::before
           display: none
-    
+
     .others
       .otherTitle
         display: inline-block
@@ -170,6 +170,4 @@ export default {
         &::before
           padding: 0 $base-spacing
           content: '|'
-
 </style>
-

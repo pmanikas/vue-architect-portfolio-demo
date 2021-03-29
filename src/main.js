@@ -38,12 +38,12 @@ Vue.use(VeeValidate)
 Vue.use(VueAxios, axios)
 Vue.use(PrismicVue, {
   endpoint: window.prismic.endpoint,
-  linkResolver
-});
+  linkResolver,
+})
 Vue.use(VueAnalytics, {
   id: 'UA-60861135-12',
-  router
-});
+  router,
+})
 
 Vue.component('BaseVerLine', BaseVerLine)
 Vue.component('BaseHorLine', BaseHorLine)
@@ -54,4 +54,4 @@ new Vue({
   router,
   store,
   render: h => h(App),
-}).$mount('#app');
+}).$mount('#app')

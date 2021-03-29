@@ -29,99 +29,97 @@ export default {
   name: 'Projects',
   components: {
     SideSea,
-    ProjectCover
+    ProjectCover,
   },
   computed: {
-    ...mapState([
-      'cards'
-    ])
+    ...mapState(['cards']),
   },
   created() {
     store.dispatch('getProjectCards')
-  }
+  },
 }
 </script>
 
 <style lang="sass" scoped>
-  @import '~@assets/style/essentials'
+@import '~@assets/style/essentials'
 
-  .projects
-    position: relative
-    overflow: hidden
-    max-width: 100vw
-  .tiles
-    overflow: visible
-    background: url(~@/assets/img/grid-tile.png) repeat
-    background-position: 0% 0.1%
-    background-size: 7.144% 10vh
-    min-height: 50vh
-    @include fill
-  .projectItem
-    position: relative
-    min-height: 50vh
+.projects
+  position: relative
+  overflow: hidden
+  max-width: 100vw
+.tiles
+  overflow: visible
+  background: url(~@/assets/img/grid-tile.png) repeat
+  background-position: 0% 0.1%
+  background-size: 7.144% 10vh
+  min-height: 50vh
+  @include fill
+.projectItem
+  position: relative
+  min-height: 50vh
 
-  .projectItem:nth-of-type(1)
-    .seamanArea
-      position: absolute
-      bottom: 15vh
-      left: -43px
-      z-index: 10
-      width: 86px
-      height: 68px
-      background: url(~@assets/img/seaman.png) no-repeat
-      background-size: contain
-  .projectItem:nth-of-type(2)
-    .lightArea
-      position: absolute
-      bottom: 150px
-      left: -240px
-      width: 240px
-      height: 265px
-      background: url(~@assets/img/light.png)
-      animation: light 2s linear infinite
-    .doggymanArea
-      position: absolute
-      bottom: -114px
-      left: 40%
-      z-index: 10
-      width: 216px
-      height: 228px
-      background: url(~@assets/img/doggyman.png) no-repeat
-      background-size: contain
-  .projectItem:nth-of-type(3)
-    .benchArea
-      position: absolute
-      right: $base-spacing
-      bottom: $base-spacing
-      z-index: 10
-      width: 55px
-      height: 183px
-      background: url(~@assets/img/bench.png) no-repeat
-      background-size: contain
-  .projectItem:nth-of-type(4)
-    .lightArea
-      position: absolute
-      bottom: 150px
-      left: -240px
-      width: 240px
-      height: 265px
-      background: url(~@assets/img/light.png)
-    .benchmanArea
-      position: absolute
-      right: $base-spacing
-      bottom: $base-spacing
-      z-index: 10
-      width: 117px
-      height: 183px
-      background: url(~@assets/img/benchman.png) no-repeat
-      background-size: contain
+.projectItem:nth-of-type(1)
+  .seamanArea
+    position: absolute
+    bottom: 15vh
+    left: -43px
+    z-index: 10
+    width: 86px
+    height: 68px
+    background: url(~@assets/img/seaman.png) no-repeat
+    background-size: contain
+.projectItem:nth-of-type(2)
+  .lightArea
+    position: absolute
+    bottom: 150px
+    left: -240px
+    width: 240px
+    height: 265px
+    background: url(~@assets/img/light.png)
+    animation: light 2s linear infinite
+  .doggymanArea
+    position: absolute
+    bottom: -114px
+    left: 40%
+    z-index: 10
+    width: 216px
+    height: 228px
+    background: url(~@assets/img/doggyman.png) no-repeat
+    background-size: contain
+.projectItem:nth-of-type(3)
+  .benchArea
+    position: absolute
+    right: $base-spacing
+    bottom: $base-spacing
+    z-index: 10
+    width: 55px
+    height: 183px
+    background: url(~@assets/img/bench.png) no-repeat
+    background-size: contain
+.projectItem:nth-of-type(4)
+  .lightArea
+    position: absolute
+    bottom: 150px
+    left: -240px
+    width: 240px
+    height: 265px
+    background: url(~@assets/img/light.png)
+  .benchmanArea
+    position: absolute
+    right: $base-spacing
+    bottom: $base-spacing
+    z-index: 10
+    width: 117px
+    height: 183px
+    background: url(~@assets/img/benchman.png) no-repeat
+    background-size: contain
 
-  @media (min-width: $desktop)
-    .projectCover
-      position: absolute
-      top: 45vh
-      left: 50%
-      width: 72.8%
-      margin: 0
-      transform: translateY(-50%) translateX(-50%)
+@media (min-width: $desktop)
+  .projectCover
+    position: absolute
+    top: 45vh
+    left: 50%
+    width: 72.8%
+    margin: 0
+    transform: translateY(-50%) translateX(-50%)
 </style>

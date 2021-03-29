@@ -9,17 +9,17 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'Button Title'
+      default: 'Button Title',
     },
     widthy: {
       type: String,
-      default: 'auto'
+      default: 'auto',
     },
     disabled: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 }
 </script>
 

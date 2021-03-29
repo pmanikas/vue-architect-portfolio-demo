@@ -20,27 +20,27 @@ export default {
       menu: [
         {
           title: 'Home',
-          link: 'homepage'
+          link: 'homepage',
         },
         {
           title: 'About',
-          link: 'about'
+          link: 'about',
         },
         {
           title: 'Skills',
-          link: 'skills'
+          link: 'skills',
         },
         {
           title: 'Contact',
-          link: 'contact'
-        }
-      ]
+          link: 'contact',
+        },
+      ],
     }
   },
   created() {
     setTimeout(() => {
       this.rest = true
-    }, 1000);
+    }, 1000)
   },
   methods: {
     toggleMenu() {
@@ -48,8 +48,8 @@ export default {
     },
     closeMenu() {
       this.active = false
-    }
-  }
+    },
+  },
 }
 </script>
 

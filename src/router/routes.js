@@ -9,32 +9,32 @@ export default [
   {
     path: '/',
     name: 'homepage',
-    component: HomePage
+    component: HomePage,
   },
   {
     path: '/about',
     name: 'about',
-    component: AboutPage
+    component: AboutPage,
   },
   {
     path: '/skills',
     name: 'skills',
-    component: SkillsPage
+    component: SkillsPage,
   },
   {
     path: '/project/:projectId',
     name: 'project',
-    component: ProjectPage
+    component: ProjectPage,
   },
   {
     path: '/contact',
     name: 'contact',
-    component: ContactPage
+    component: ContactPage,
   },
   {
     path: '/404',
     name: '404',
-    component: NotFound
+    component: NotFound,
   },
   {
     path: '*',

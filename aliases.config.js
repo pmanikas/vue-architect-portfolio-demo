@@ -13,13 +13,13 @@ const aliases = {
   '@assets': 'src/assets',
   '@utils': 'src/utils',
   '@router': 'src/router',
-  '@data' : 'src/data',
-  '@services' : 'src/services',
-  '@store' : 'src/store'
+  '@data': 'src/data',
+  '@services': 'src/services',
+  '@store': 'src/store',
 }
 
 module.exports = {
-  webpack: {}
+  webpack: {},
 }
 
 for (const alias in aliases) {

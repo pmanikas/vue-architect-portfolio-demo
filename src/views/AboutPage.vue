@@ -47,7 +47,7 @@ import BottomSmudge from '@components/BottomSmudge'
 export default {
   name: 'AboutPage',
   metaInfo: {
-    title: 'About'
+    title: 'About',
   },
   components: {
     AboutInfo,
@@ -55,8 +55,8 @@ export default {
     Compass,
     MapMemo,
     Credits,
-    BottomSmudge
-  }
+    BottomSmudge,
+  },
 }
 </script>
 

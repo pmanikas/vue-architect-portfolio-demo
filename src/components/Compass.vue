@@ -9,22 +9,22 @@ export default {
   methods: {
     toTop() {
       window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-      });
-    }
-  }
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      })
+    },
+  },
 }
 </script>
 
 <style lang="sass" scoped>
-  .compass
-    display: inline-block
-    cursor: pointer
-    transition: transform 1s ease-in-out
-    img
-      width: 100px
-    &:hover
-      transform: rotate(360deg)
+.compass
+  display: inline-block
+  cursor: pointer
+  transition: transform 1s ease-in-out
+  img
+    width: 100px
+  &:hover
+    transform: rotate(360deg)
 </style>

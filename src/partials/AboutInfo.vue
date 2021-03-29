@@ -14,18 +14,18 @@ import Avatar from '@components/Avatar'
 export default {
   name: 'AboutInfo',
   components: {
-    Avatar
+    Avatar,
   },
   props: {
     heading: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   data() {
     return {
-      owner: owner
+      owner: owner,
     }
-  }
+  },
 }
 </script>

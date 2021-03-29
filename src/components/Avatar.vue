@@ -10,9 +10,9 @@ export default {
   name: 'Avatar',
   data() {
     return {
-      owner: owner
+      owner: owner,
     }
-  }
+  },
 }
 </script>
 

@@ -1,3 +1,3 @@
 export let isDesktop = () => {
-  return (window.innerWidth > 991)
+  return window.innerWidth > 991
 }

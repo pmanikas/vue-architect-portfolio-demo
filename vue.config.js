@@ -14,4 +14,9 @@ module.exports = {
     // Enable CSS source maps.
     sourceMap: true,
   },
+  publicPath:
+    process.env.NODE_ENV === 'production'
+      ? '/vue-architect-portfolio-demo/'
+      : '/',
+  lintOnSave: true,
 }
