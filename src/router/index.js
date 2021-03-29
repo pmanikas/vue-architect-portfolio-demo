@@ -7,7 +7,6 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes,
-  mode: 'history',
   scrollBehavior(to, from, savedPosition) {
     setTimeout(() => {
       return window.scrollTo({ top: 0 })

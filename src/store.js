@@ -11,10 +11,10 @@ export default new Vuex.Store({
   },
 
   mutations: {
-    setProjectCards(state, cards) {
+    SET_PROJECT_CARDS(state, cards) {
       state.cards = cards;
     },
-    setProject(state, project) {
+    SET_PROJECTS(state, project) {
       state.project = project;
     }
   },
@@ -25,7 +25,6 @@ export default new Vuex.Store({
         Vue.prototype.$prismic.Predicates.at('document.type', 'projects'), 
         { orderings: '[document.first_publication_date]' }
       ).then(response => {
-        // console.log(response);
         const cards = response.results.map(({data, uid}) => {
           return {
             uid: uid,
@@ -34,15 +33,14 @@ export default new Vuex.Store({
             cover: (data.cover ? data.cover.url : imageNotFound),
           }
         });
-        commit('setProjectCards', cards);
-        // console.log('setProjectCards', cards);
+        commit('SET_PROJECT_CARDS', cards);
       }).catch((error) => {
         console.log(error);
         const cards = {
           title: 'Please try again later',
           cover: imageNotFound,
         };
-        commit('setProjectCards', cards);
+        commit('SET_PROJECT_CARDS', cards);
         return cards
       });
     },
@@ -50,7 +48,6 @@ export default new Vuex.Store({
     getProject({commit, state}, uid) {
       return Vue.prototype.$prismic.client.getByUID('projects', uid)
         .then((response) => {
-          // console.log('project newQuery response', response);
           const project = {
             uid: uid,
             title: response.data.title[0].text,
@@ -59,8 +56,7 @@ export default new Vuex.Store({
             smallCover: (response.data.cover.small ? response.data.cover.small.url : imageNotFound),
             gallery: response.data.gallery || null
           };
-        commit('setProject', project);
-        // console.log('project newQuery', project);
+        commit('SET_PROJECTS', project);
         return project
       }).catch((error) => {
         console.log(error);
@@ -68,7 +64,7 @@ export default new Vuex.Store({
           title: 'Please try again later',
           cover: imageNotFound,
         };
-        commit('setProject', project);
+        commit('SET_PROJECTS', project);
         return project
       });
     },

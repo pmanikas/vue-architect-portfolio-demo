@@ -1,7 +1,5 @@
 import avatar from '@assets/img/face.png'
 
-export const imageNotFound = require('@assets/img/image-not-found.jpg');
-
 export let owner = {
   name: 'Lefteris Kapsalas',
   description: 'Hello. My name is Lefteris Kapsalas, I’m an architect from Thessaloniki, Greece and recently, I moved to Edinburgh. I love art & design and strive to learn more and continue to grow as a designer. This is a collection of my work over the last few years. Enjoy!',
